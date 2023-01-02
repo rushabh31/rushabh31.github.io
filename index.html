@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en" class="a0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Rushabh's Portfolio </title>
+    <link rel="shortcut icon" href="images/logo/avatar.png" sizes="192x192" type="image/png" />
+    <!-- ===== CSS Files ===== -->
+    <link rel="stylesheet" href="css/glightbox.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/apexcharts.css" />
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- ===== Alpine JS ===== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script defer src="./js/alpine.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/readmore.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script>
+      // ===== wow js
+      new WOW().init();
+    </script>
+  </head>
+  <body x-data="
+      {
+        scrolledFromTop: false
+      }
+    " x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false" @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false" class="a1 dark:a2">
+    <!-- ===== Header start ===== -->
+    <header x-data="
+        {
+          navbarOpen: false,
+          dropdownOpen: false
+        }
+      " :class="scrolledFromTop ? 'a3p dark:a2 a4 dark:a4 a5 a6 ' : ' a7 dark:a7' " class="a8 a9 aa ab ac ad">
+      <div class="ae">
+        <div class="af ag aa ac ah">
+          <div class="aj ak">
+            <a href="index.html" :class="scrolledFromTop && '!al lg:!am' " class="an ab a2h lg:aW">
+              <img src="images/logo/logo-light.svg" alt="logo" class="ab dark:ao" />
+              <img src="images/logo/logo-dark.svg" alt="logo" class="ao ab dark:an" />
+            </a>
+          </div>
+          <div class="aa ab ac ap ak">
+            <div>
+              <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive' " id="navbarToggler" class="aq ar as/2 an at/2 au av aw[6px] ax focus:ay lg:ao">
+                <span :class="navbarOpen && 'az aA[7px]' " class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"></span>
+                <span :class="navbarOpen && 'aE' " class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"></span>
+                <span :class="navbarOpen && 'aA[-8px] aF[135deg]' " class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"></span>
+              </button>
+              <nav :class="!navbarOpen && 'ao' " id="navbarCollapse" class="aq ar aG ab aH[250px] au a1 al aI aJ dark:a2 lg:aK lg:an lg:ab lg:aj lg:a7 lg:aL lg:aM dark:lg:a7">
+                <ul class="aN lg:aa">
+                  <li>
+                    <a href="#home" class="a3q scroll-menu aa am a2B aQ  hover:aR dark:aS dark:hover:aR lg:aU lg:aV lg:aW xl:aX 2xl:aY"> Home </a>
+                  </li>
+                  <li>
+                    <a href="#education" class="a3q scroll-menu aa am a2B aQ hover:aR dark:aS dark:hover:aR lg:aU lg:aV lg:aW xl:aX 2xl:aY"> Education </a>
+                  </li>
+                  <li>
+                    <a href="#experience" class="a3q scroll-menu aa am a2B aQ hover:aR dark:aS dark:hover:aR lg:aU lg:aV lg:aW xl:aX 2xl:aY"> Experience </a>
+                  </li>
+                  <li>
+                    <a href="https://rushabh.info/" onclick="window.open('https://rushabh.info/react-blog-github')" class="a3q scroll-menu aa am a2B aQ hover:aR dark:aS dark:hover:aR lg:aU lg:aV lg:aW xl:aX 2xl:aY"> Blog </a>
+                  </li>
+                  <li>
+                    <a href="#contact" class="a3q scroll-menu aa am a2B aQ hover:aR dark:aS dark:hover:aR lg:aU lg:aV lg:aW xl:aX 2xl:aY"> Contact </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="aa ap a1l lg:a1m xl:a1n 2xl:a1o">
+              <div class="a1p">
+                <label for="darkToggler" class="aa a1q a1r a1s ac a1t a1u a1v dark:a1w[#1E2763]">
+                  <input type="checkbox" name="darkToggler" id="darkToggler" class="a1x" aria-label="darkToggler" />
+                  <span class="aa a1y a1z ac a1t a1u a1A aT dark:a7 dark:aS">
+                    <svg width="16" height="16" viewBox="0 0 16 16" class="a1B">
+                      <path d="M4.50663 3.2267L3.30663 2.03337L2.36663 2.97337L3.55996 4.1667L4.50663 3.2267ZM2.66663 7.00003H0.666626V8.33337H2.66663V7.00003ZM8.66663 0.366699H7.33329V2.33337H8.66663V0.366699ZM13.6333 2.97337L12.6933 2.03337L11.5 3.2267L12.44 4.1667L13.6333 2.97337ZM11.4933 12.1067L12.6866 13.3067L13.6266 12.3667L12.4266 11.1734L11.4933 12.1067ZM13.3333 7.00003V8.33337H15.3333V7.00003H13.3333ZM7.99996 3.6667C5.79329 3.6667 3.99996 5.46003 3.99996 7.6667C3.99996 9.87337 5.79329 11.6667 7.99996 11.6667C10.2066 11.6667 12 9.87337 12 7.6667C12 5.46003 10.2066 3.6667 7.99996 3.6667ZM7.33329 14.9667H8.66663V13H7.33329V14.9667ZM2.36663 12.36L3.30663 13.3L4.49996 12.1L3.55996 11.16L2.36663 12.36Z" />
+                    </svg>
+                  </span>
+                  <span class="aa a1y a1z ac a1t a1u a7 aQ dark:a1A dark:aT">
+                    <svg width="13" height="15" viewBox="0 0 13 15" class="a1B">
+                      <path d="M10.6111 12.855C11.591 12.1394 12.3151 11.1979 12.7723 10.1623C10.4824 10.4065 8.1342 9.46314 6.67948 7.47109C5.22476 5.47905 5.04093 2.95516 5.97054 0.848179C4.84491 0.968503 3.72768 1.37162 2.74781 2.08719C-0.224105 4.25747 -0.874706 8.43084 1.29558 11.4028C3.46586 14.3747 7.63923 15.0253 10.6111 12.855Z" />
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div class="ao sm:aa">
+                <a href="images/resume/resume.pdf" target="_blank" class="a3q aa ac a1t a1u a1C a1D aw[9px] a1E a1F aP aQ a1G hover:a1H hover:a1A hover:aT dark:a1I dark:aT dark:hover:a1 dark:hover:aR lg:px-4 2xl:px-8"> Resume </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ===== Header end ===== -->
+    <!-- ===== Hero Section start ===== -->
+    <section id="home" class="a3p dark:a2 af a2E a3r a3s">
+      <div class="ae">
+        <div class="ag aa a1L">
+          <div class="ab ak">
+            <div class="a3t aH[720px] a2G">
+              <img src="images/logo/hero1-dark.svg" alt="ayroui" class="floating  ao dark:an" />
+              <img src="images/logo/hero1-dark.svg" alt="ayroui" class="floating dark:ao" />
+              <h1 class="a1N a2o a1P a2p a1k dark:aT md:a2Q[45px]"></h1>
+              <p class="a3q a3t a1N aH[620px] a2B a1R aQ dark:aT"> A ML enthusiast by day, a PhD student by noon and a investor by night. I am more than what meets the eye. To know more, keep scrolling! </p>
+              <div class="a3u a1W aa a1L ac a1t sm:a3v">
+                <div class="aZ af a3w a3x sm:a3y">
+                  <a href="https://twitter.com/rushabhpatel5" class="aV a1c" name="social icon" aria-label="social icon">
+                    <img src="images/social/twitter.svg">
+                  </a>
+                </div>
+                <div class="aZ af a3w a3x sm:a3y">
+                  <a href="https://www.linkedin.com/in/rushabhpatel5/" class="aV a1c" name="social icon" aria-label="social icon">
+                    <img src="images/social/linkedin.svg">
+                  </a>
+                </div>
+                <div class="aZ af a3w a3x sm:a3y">
+                  <a href="https://github.com/rushabh31" name="social icon" aria-label="social icon">
+                    <img src="images/social/github.svg">
+                  </a>
+                </div>
+                <div class="aZ af a3w a3x sm:a3y">
+                  <a href="mailto:rushabh.patel5@gmail.com" class="aV a1c" name="social icon" aria-label="social icon">
+                    <img src="images/social/gmail.svg">
+                  </a>
+                </div>
+                <div class="aZ af a3w a3x sm:a3y">
+                  <a href="https://stackoverflow.com/users/7120667/rushabh-patel" class="aV a1c" name="social icon" aria-label="social icon">
+                    <img src="images/social/stackoverflow.svg">
+                  </a>
+                </div>
+              </div>
+              <div class="a1t">
+                <a href="images/resume/resume.pdf" target="_blank" class="a3q a1u a1A a22 a1E a1F aP aT hover:a2X dark:hover:bg-opacity-90"> Download Resume </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="aq a8 a1a a2Z a2w ab a3z" style="
+          background-image: linear-gradient(
+            180deg,
+            #a8c66b 0%,
+            rgba(62, 125, 255, 0) 100%
+          );
+        "></div>
+      <img src="images/shapes/hero-shape-light-1.svg" alt="" class="aq a1a a8 a2Z dark:ao" />
+      <img src="images/shapes/hero-shape-dark-1.svg" alt="" class="aq a1a a8 a2Z" />
+      <img src="images/shapes/hero-shape-light-2.svg" alt="" class="aq a19 a8 a2Z dark:ao" />
+      <img src="images/shapes/hero-shape-dark-2.svg" alt="" class="aq a19 a8 a2Z" />
+    </section>
+    <!-- ===== Hero Section end ===== -->
+    <!-- ===== Brands Section start ===== -->
+    <section class="a3p dark:a2">
+      <div class="ae">
+        <div class="wow fadeInUp a3A dark:a2l[#2D2C4A]" data-wow-delay="0s">
+          <h2 class="a3q a1W a2G a2B a1P a1k dark:aT sm:a2B"> Worked with these organizations </h2>
+          <div class="ag aa a1L ac a1t">
+            <div class="ak">
+              <a href="https://evolutioniq.com/" target="_blank" rel="nofollow noopenner" class="a1W aa aH[170px] a1t">
+                <img src="images/brands/eiq.png" alt="ayroui" class="a3t ao a3B a2G dark:an" />
+                <img src="images/brands/eiq.png" alt="ayroui" class="a3t a3B a2G dark:ao" />
+              </a>
+            </div>
+            <div class="ak">
+              <a href="https://att.com" target="_blank" rel="nofollow noopenner" class="a1W aa aH[170px] a1t">
+                <img src="images/brands/att-dark.png" alt="lineicons" class="a3t ao a32 a2G dark:an" />
+                <img src="images/brands/att-light.svg" alt="lineicons" class="a3t a32 a2G dark:ao" />
+              </a>
+            </div>
+            <div class="ak">
+              <a href="https://chop.edu" target="_blank" rel="nofollow noopenner" class="a1W aa aH[170px] a1t">
+                <img src="images/brands/chop.png" alt="lineicons" class="a3t ao a1y a2G dark:an" />
+                <img src="images/brands/chop.png" alt="lineicons" class="a3t a1y a2G dark:ao" />
+              </a>
+            </div>
+            <div class="ak">
+              <a href="https://vnshealth.org" target="_blank" rel="nofollow noopenner" class="a1W aa aH[170px] a1t">
+                <img src="images/brands/VNS-Health-Logo-dark.png" alt="tailgrids" class="a3t ao a32 a2G dark:an" />
+                <img src="images/brands/VNS-Health-Logo-light.png" alt="tailgrids" class="a3t a1y a2G dark:ao" />
+              </a>
+            </div>
+            <div class="ak">
+              <a href="https://jvion.com" target="_blank" rel="nofollow noopenner" class="a1W aa aH[170px] a1t">
+                <img src="images/brands/jvion-logo.png" alt="ayroui" class="a3t ao a1y a2G dark:an" />
+                <img src="images/brands/jvion-logo.png" alt="ayroui" class="a3t a1y a2G dark:ao" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== Brands Section end ===== -->
+    <!-- ===== Team Section start ===== -->
+    <section id="education" class="a3p dark:a2 a36 a2l[#F3F4F4] a1J[120px] a1T dark:a2l[#2D2C4A]">
+      <div class="ae">
+        <div class="wow fadeInUp a3t a3C aH[590px] a2G md:a30" data-wow-delay="0s">
+          <span class="a3q a2d aO a1P aR sm:a1O">
+            <div style="width:100%; height:100%">
+              <img style="margin-left: auto;
+          margin-right: auto; margin-bottom: 3rem;
+          display: block;" src="images/education/hat.svg" alt="logo" class="floating" width="70%" />
+            </div> Degrees
+          </span>
+          <h2 class="a3q a2d a2o a1P a2p aR dark:aT md:a2Q[45px]"> Education </h2>
+          <blockquote>
+            <p class="a3q a1O a1R aQ dark:aS"> Live as if you were to die tomorrow. Learn as if you were to live forever. <i> — Mahatma Gandhi</i>
+            </p>
+          </blockquote>
+        </div>
+        <div class="ag aa a1L">
+          <div class="ab ak sm:a1M lg:a1M/3">
+            <div class="a3D  aZ wow fadeInUp a1W au a3E a21 a1v a1f a2G a1G a1H dark:a3F dark:a3" data-wow-delay="0s">
+              <div class="a2a a2c a1i" style="display: inline-block;
+                width: 130px;
+                height: 130px;
+                background: url(https://licensing.auburn.edu/wp-content/uploads/2020/02/Seal1.jpg);
+                background-position: 50% 50%;
+                background-size: cover;
+                border-radius: 50%;"></div>
+              <div>
+                <h3 class="a3q a2s a1O aP a1k dark:aT"> Auburn University, Alabama </h3>
+                <p class="a3q a2d aO a1R aQ dark:aS"> Ph.D in Computer Science <br> (2020 - Present) </p>
+                <br>
+                <div class="a1N aa ac a1t a3G">
+                  <a href="https://twitter.com/AuburnU" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                    <svg width="20" height="20" viewBox="0 0 20 20" class="a1B">
+                      <path d="M18.7168 4.99998C18.0751 5.29165 17.3834 5.48331 16.6668 5.57498C17.4001 5.13331 17.9668 4.43331 18.2334 3.59165C17.5418 4.00831 16.7751 4.29998 15.9668 4.46665C15.3084 3.74998 14.3834 3.33331 13.3334 3.33331C11.3751 3.33331 9.77511 4.93331 9.77511 6.90831C9.77511 7.19165 9.80845 7.46665 9.86678 7.72498C6.90011 7.57498 4.25845 6.14998 2.50011 3.99165C2.19178 4.51665 2.01678 5.13331 2.01678 5.78331C2.01678 7.02498 2.64178 8.12498 3.60845 8.74998C3.01678 8.74998 2.46678 8.58331 1.98345 8.33331C1.98345 8.33331 1.98345 8.33331 1.98345 8.35831C1.98345 10.0916 3.21678 11.5416 4.85011 11.8666C4.55011 11.95 4.23345 11.9916 3.90845 11.9916C3.68345 11.9916 3.45845 11.9666 3.24178 11.925C3.69178 13.3333 5.00011 14.3833 6.57511 14.4083C5.35845 15.375 3.81678 15.9416 2.13345 15.9416C1.85011 15.9416 1.56678 15.925 1.28345 15.8916C2.86678 16.9083 4.75011 17.5 6.76678 17.5C13.3334 17.5 16.9418 12.05 16.9418 7.32498C16.9418 7.16665 16.9418 7.01665 16.9334 6.85831C17.6334 6.35831 18.2334 5.72498 18.7168 4.99998Z" />
+                    </svg>
+                  </a>
+                  <a href="https://www.linkedin.com/school/auburn-university/" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                    <svg width="20" height="20" viewBox="0 0 20 20" class="a1B">
+                      <path d="M15.8333 2.5C16.2754 2.5 16.6993 2.67559 17.0118 2.98816C17.3244 3.30072 17.5 3.72464 17.5 4.16667V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H15.8333ZM15.4167 15.4167V11C15.4167 10.2795 15.1304 9.5885 14.621 9.07903C14.1115 8.56955 13.4205 8.28333 12.7 8.28333C11.9917 8.28333 11.1667 8.71667 10.7667 9.36667V8.44167H8.44167V15.4167H10.7667V11.3083C10.7667 10.6667 11.2833 10.1417 11.925 10.1417C12.2344 10.1417 12.5312 10.2646 12.75 10.4834C12.9688 10.7022 13.0917 10.9989 13.0917 11.3083V15.4167H15.4167ZM5.73333 7.13333C6.10464 7.13333 6.46073 6.98583 6.72328 6.72328C6.98583 6.46073 7.13333 6.10464 7.13333 5.73333C7.13333 4.95833 6.50833 4.325 5.73333 4.325C5.35982 4.325 5.0016 4.47338 4.73749 4.73749C4.47338 5.0016 4.325 5.35982 4.325 5.73333C4.325 6.50833 4.95833 7.13333 5.73333 7.13333ZM6.89167 15.4167V8.44167H4.58333V15.4167H6.89167Z" />
+                    </svg>
+                  </a>
+                  <a href="https://www.auburn.edu/" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg class="a1B" width="20" height="20" version="1.1" id="lni_lni-website" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                      <g>
+                        <path d="M20.5,19.4l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1s-1.5,0.4-1.8,1.1l-1,2l-1.2-2.4c-0.4-0.9-1.5-1.2-2.3-0.8
+                      c-0.9,0.4-1.2,1.5-0.8,2.3l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1c0.8,0,1.5-0.4,1.8-1.1l1-2l1,2c0.3,0.7,1,1.1,1.8,1.1
+                      c0.8,0,1.5-0.4,1.8-1.1l2.5-5.1c0.4-0.9,0.1-1.9-0.8-2.3C22,18.1,20.9,18.5,20.5,19.4z" />
+                        <path d="M38.3,18.6c-0.9-0.4-1.9-0.1-2.3,0.8l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1c-0.8,0-1.5,0.4-1.8,1.1l-1,2L28,19.4
+                      c-0.4-0.9-1.5-1.2-2.3-0.8c-0.9,0.4-1.2,1.5-0.8,2.3l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1c0.8,0,1.5-0.4,1.8-1.1l1-2l1,2
+                      c0.3,0.7,1,1.1,1.8,1.1c0,0,0,0,0,0c0.8,0,1.5-0.4,1.8-1.1l2.5-5.1C39.6,20.1,39.2,19,38.3,18.6z" />
+                        <path d="M46.5,26l1-2l1,2c0.3,0.7,1,1.1,1.8,1.1s1.5-0.4,1.8-1.1l2.5-5.1c0.4-0.9,0.1-1.9-0.8-2.3c-0.9-0.4-1.9-0.1-2.3,0.8
+                      l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1c-0.8,0-1.5,0.4-1.8,1.1l-1,2l-1.2-2.4c-0.4-0.9-1.5-1.2-2.3-0.8c-0.9,0.4-1.2,1.5-0.8,2.3
+                      l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1C45.5,27.2,46.2,26.7,46.5,26z" />
+                        <path d="M58.4,7.8H5.6c-2.4,0-4.3,2-4.3,4.4v21.2c0,2.4,1.9,4.4,4.3,4.4h31.7c1,0,1.8-0.8,1.8-1.8s-0.8-1.8-1.8-1.8H5.6
+                      c-0.4,0-0.8-0.4-0.8-0.9V12.2c0-0.5,0.4-0.9,0.8-0.9h52.9c0.4,0,0.8,0.4,0.8,0.9v21.2c0,0.5-0.4,0.9-0.9,0.9c-1,0-1.8,0.8-1.8,1.8
+                      s0.8,1.8,1.8,1.8c2.4,0,4.4-2,4.4-4.4V12.2C62.8,9.8,60.8,7.8,58.4,7.8z" />
+                        <path d="M61.1,44.3L47,37.2c-1-0.5-2.1-0.4-2.9,0.4c-0.7,0.7-0.9,1.9-0.4,2.9l7.1,14.1c0.5,1,1.5,1.6,2.5,1.6c0,0,0,0,0.1,0
+                      c0.9,0,1.7-0.6,2.1-1.4l1.8-4.1l4.1-1.8c0.8-0.4,1.4-1.2,1.4-2.1C62.7,45.8,62.1,44.8,61.1,44.3z M54.6,48.1l-1.5,3.3l-4.8-9.6
+                      l9.6,4.8L54.6,48.1z" />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ab ak sm:a1M lg:a1M/3">
+            <div class="a3D  aZ wow fadeInUp a1W au a3E a21 a1v a1f a2G a1G a1H dark:a3F dark:a3" data-wow-delay="0s">
+              <div class="a2a a2c a1i" style="display: inline-block;
+                  width: 130px;
+                  height: 130px;
+                  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/University_of_Illinois_seal.svg/1200px-University_of_Illinois_seal.svg.png);
+                  background-position: 50% 50%;
+                  background-size: cover;
+                  border-radius: 50%;"></div>
+              <div>
+                <h3 class="a3q a2s a1O aP a1k dark:aT"> University of Illinois, Springfield IL </h3>
+                <p class="a3q a2d aO a1R aQ dark:aS"> MS in Computer Science <br> (Jan 2016 - May 2017) </p>
+                <br>
+                <div class="a1N aa ac a1t a3G">
+                  <a href="https://twitter.com/UISedu" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                    <svg width="20" height="20" viewBox="0 0 20 20" class="a1B">
+                      <path d="M18.7168 4.99998C18.0751 5.29165 17.3834 5.48331 16.6668 5.57498C17.4001 5.13331 17.9668 4.43331 18.2334 3.59165C17.5418 4.00831 16.7751 4.29998 15.9668 4.46665C15.3084 3.74998 14.3834 3.33331 13.3334 3.33331C11.3751 3.33331 9.77511 4.93331 9.77511 6.90831C9.77511 7.19165 9.80845 7.46665 9.86678 7.72498C6.90011 7.57498 4.25845 6.14998 2.50011 3.99165C2.19178 4.51665 2.01678 5.13331 2.01678 5.78331C2.01678 7.02498 2.64178 8.12498 3.60845 8.74998C3.01678 8.74998 2.46678 8.58331 1.98345 8.33331C1.98345 8.33331 1.98345 8.33331 1.98345 8.35831C1.98345 10.0916 3.21678 11.5416 4.85011 11.8666C4.55011 11.95 4.23345 11.9916 3.90845 11.9916C3.68345 11.9916 3.45845 11.9666 3.24178 11.925C3.69178 13.3333 5.00011 14.3833 6.57511 14.4083C5.35845 15.375 3.81678 15.9416 2.13345 15.9416C1.85011 15.9416 1.56678 15.925 1.28345 15.8916C2.86678 16.9083 4.75011 17.5 6.76678 17.5C13.3334 17.5 16.9418 12.05 16.9418 7.32498C16.9418 7.16665 16.9418 7.01665 16.9334 6.85831C17.6334 6.35831 18.2334 5.72498 18.7168 4.99998Z" />
+                    </svg>
+                  </a>
+                  <a href="https://www.linkedin.com/school/university-of-illinois-at-springfield/" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                    <svg width="20" height="20" viewBox="0 0 20 20" class="a1B">
+                      <path d="M15.8333 2.5C16.2754 2.5 16.6993 2.67559 17.0118 2.98816C17.3244 3.30072 17.5 3.72464 17.5 4.16667V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H15.8333ZM15.4167 15.4167V11C15.4167 10.2795 15.1304 9.5885 14.621 9.07903C14.1115 8.56955 13.4205 8.28333 12.7 8.28333C11.9917 8.28333 11.1667 8.71667 10.7667 9.36667V8.44167H8.44167V15.4167H10.7667V11.3083C10.7667 10.6667 11.2833 10.1417 11.925 10.1417C12.2344 10.1417 12.5312 10.2646 12.75 10.4834C12.9688 10.7022 13.0917 10.9989 13.0917 11.3083V15.4167H15.4167ZM5.73333 7.13333C6.10464 7.13333 6.46073 6.98583 6.72328 6.72328C6.98583 6.46073 7.13333 6.10464 7.13333 5.73333C7.13333 4.95833 6.50833 4.325 5.73333 4.325C5.35982 4.325 5.0016 4.47338 4.73749 4.73749C4.47338 5.0016 4.325 5.35982 4.325 5.73333C4.325 6.50833 4.95833 7.13333 5.73333 7.13333ZM6.89167 15.4167V8.44167H4.58333V15.4167H6.89167Z" />
+                    </svg>
+                  </a>
+                  <a href="https://www.uis.edu/" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg class="a1B" width="20" height="20" version="1.1" id="lni_lni-website" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                      <g>
+                        <path d="M20.5,19.4l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1s-1.5,0.4-1.8,1.1l-1,2l-1.2-2.4c-0.4-0.9-1.5-1.2-2.3-0.8
+                      c-0.9,0.4-1.2,1.5-0.8,2.3l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1c0.8,0,1.5-0.4,1.8-1.1l1-2l1,2c0.3,0.7,1,1.1,1.8,1.1
+                      c0.8,0,1.5-0.4,1.8-1.1l2.5-5.1c0.4-0.9,0.1-1.9-0.8-2.3C22,18.1,20.9,18.5,20.5,19.4z" />
+                        <path d="M38.3,18.6c-0.9-0.4-1.9-0.1-2.3,0.8l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1c-0.8,0-1.5,0.4-1.8,1.1l-1,2L28,19.4
+                      c-0.4-0.9-1.5-1.2-2.3-0.8c-0.9,0.4-1.2,1.5-0.8,2.3l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1c0.8,0,1.5-0.4,1.8-1.1l1-2l1,2
+                      c0.3,0.7,1,1.1,1.8,1.1c0,0,0,0,0,0c0.8,0,1.5-0.4,1.8-1.1l2.5-5.1C39.6,20.1,39.2,19,38.3,18.6z" />
+                        <path d="M46.5,26l1-2l1,2c0.3,0.7,1,1.1,1.8,1.1s1.5-0.4,1.8-1.1l2.5-5.1c0.4-0.9,0.1-1.9-0.8-2.3c-0.9-0.4-1.9-0.1-2.3,0.8
+                      l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1c-0.8,0-1.5,0.4-1.8,1.1l-1,2l-1.2-2.4c-0.4-0.9-1.5-1.2-2.3-0.8c-0.9,0.4-1.2,1.5-0.8,2.3
+                      l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1C45.5,27.2,46.2,26.7,46.5,26z" />
+                        <path d="M58.4,7.8H5.6c-2.4,0-4.3,2-4.3,4.4v21.2c0,2.4,1.9,4.4,4.3,4.4h31.7c1,0,1.8-0.8,1.8-1.8s-0.8-1.8-1.8-1.8H5.6
+                      c-0.4,0-0.8-0.4-0.8-0.9V12.2c0-0.5,0.4-0.9,0.8-0.9h52.9c0.4,0,0.8,0.4,0.8,0.9v21.2c0,0.5-0.4,0.9-0.9,0.9c-1,0-1.8,0.8-1.8,1.8
+                      s0.8,1.8,1.8,1.8c2.4,0,4.4-2,4.4-4.4V12.2C62.8,9.8,60.8,7.8,58.4,7.8z" />
+                        <path d="M61.1,44.3L47,37.2c-1-0.5-2.1-0.4-2.9,0.4c-0.7,0.7-0.9,1.9-0.4,2.9l7.1,14.1c0.5,1,1.5,1.6,2.5,1.6c0,0,0,0,0.1,0
+                      c0.9,0,1.7-0.6,2.1-1.4l1.8-4.1l4.1-1.8c0.8-0.4,1.4-1.2,1.4-2.1C62.7,45.8,62.1,44.8,61.1,44.3z M54.6,48.1l-1.5,3.3l-4.8-9.6
+                      l9.6,4.8L54.6,48.1z" />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ab ak sm:a1M lg:a1M/3">
+            <div class="a3D  aZ wow fadeInUp a1W au a3E a21 a1v a1f a2G a1G a1H dark:a3F dark:a3" data-wow-delay="0s">
+              <div class="a2a a2c a1i" style="display: inline-block;
+                  width: 130px;
+                  height: 130px;
+                  background: url(images/education/siu.png);
+                  background-color: #ffffff;
+                  background-position: 50% 50%;
+                  background-size: cover;
+                  border-radius: 50%;"></div>
+              <div>
+                <h3 class="a3q a2s a1O aP a1k dark:aT"> SIT, Pune, India </h3>
+                <p class="a3q a2d aO a1R aQ dark:aS"> B.Tech in Computer Science <br> (July 2011 - May 2015) </p>
+                <br>
+                <div class="a1N aa ac a1t a3G">
+                  <a href="https://twitter.com/symbiosistweets" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                    <svg width="20" height="20" viewBox="0 0 20 20" class="a1B">
+                      <path d="M18.7168 4.99998C18.0751 5.29165 17.3834 5.48331 16.6668 5.57498C17.4001 5.13331 17.9668 4.43331 18.2334 3.59165C17.5418 4.00831 16.7751 4.29998 15.9668 4.46665C15.3084 3.74998 14.3834 3.33331 13.3334 3.33331C11.3751 3.33331 9.77511 4.93331 9.77511 6.90831C9.77511 7.19165 9.80845 7.46665 9.86678 7.72498C6.90011 7.57498 4.25845 6.14998 2.50011 3.99165C2.19178 4.51665 2.01678 5.13331 2.01678 5.78331C2.01678 7.02498 2.64178 8.12498 3.60845 8.74998C3.01678 8.74998 2.46678 8.58331 1.98345 8.33331C1.98345 8.33331 1.98345 8.33331 1.98345 8.35831C1.98345 10.0916 3.21678 11.5416 4.85011 11.8666C4.55011 11.95 4.23345 11.9916 3.90845 11.9916C3.68345 11.9916 3.45845 11.9666 3.24178 11.925C3.69178 13.3333 5.00011 14.3833 6.57511 14.4083C5.35845 15.375 3.81678 15.9416 2.13345 15.9416C1.85011 15.9416 1.56678 15.925 1.28345 15.8916C2.86678 16.9083 4.75011 17.5 6.76678 17.5C13.3334 17.5 16.9418 12.05 16.9418 7.32498C16.9418 7.16665 16.9418 7.01665 16.9334 6.85831C17.6334 6.35831 18.2334 5.72498 18.7168 4.99998Z" />
+                    </svg>
+                  </a>
+                  <a href="https://www.linkedin.com/school/sitpune.edu.in/" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                    <svg width="20" height="20" viewBox="0 0 20 20" class="a1B">
+                      <path d="M15.8333 2.5C16.2754 2.5 16.6993 2.67559 17.0118 2.98816C17.3244 3.30072 17.5 3.72464 17.5 4.16667V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H15.8333ZM15.4167 15.4167V11C15.4167 10.2795 15.1304 9.5885 14.621 9.07903C14.1115 8.56955 13.4205 8.28333 12.7 8.28333C11.9917 8.28333 11.1667 8.71667 10.7667 9.36667V8.44167H8.44167V15.4167H10.7667V11.3083C10.7667 10.6667 11.2833 10.1417 11.925 10.1417C12.2344 10.1417 12.5312 10.2646 12.75 10.4834C12.9688 10.7022 13.0917 10.9989 13.0917 11.3083V15.4167H15.4167ZM5.73333 7.13333C6.10464 7.13333 6.46073 6.98583 6.72328 6.72328C6.98583 6.46073 7.13333 6.10464 7.13333 5.73333C7.13333 4.95833 6.50833 4.325 5.73333 4.325C5.35982 4.325 5.0016 4.47338 4.73749 4.73749C4.47338 5.0016 4.325 5.35982 4.325 5.73333C4.325 6.50833 4.95833 7.13333 5.73333 7.13333ZM6.89167 15.4167V8.44167H4.58333V15.4167H6.89167Z" />
+                    </svg>
+                  </a>
+                  <a href="https://www.sitpune.edu.in/" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg class="a1B" width="20" height="20" version="1.1" id="lni_lni-website" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                      <g>
+                        <path d="M20.5,19.4l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1s-1.5,0.4-1.8,1.1l-1,2l-1.2-2.4c-0.4-0.9-1.5-1.2-2.3-0.8
+                      c-0.9,0.4-1.2,1.5-0.8,2.3l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1c0.8,0,1.5-0.4,1.8-1.1l1-2l1,2c0.3,0.7,1,1.1,1.8,1.1
+                      c0.8,0,1.5-0.4,1.8-1.1l2.5-5.1c0.4-0.9,0.1-1.9-0.8-2.3C22,18.1,20.9,18.5,20.5,19.4z" />
+                        <path d="M38.3,18.6c-0.9-0.4-1.9-0.1-2.3,0.8l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1c-0.8,0-1.5,0.4-1.8,1.1l-1,2L28,19.4
+                      c-0.4-0.9-1.5-1.2-2.3-0.8c-0.9,0.4-1.2,1.5-0.8,2.3l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1c0.8,0,1.5-0.4,1.8-1.1l1-2l1,2
+                      c0.3,0.7,1,1.1,1.8,1.1c0,0,0,0,0,0c0.8,0,1.5-0.4,1.8-1.1l2.5-5.1C39.6,20.1,39.2,19,38.3,18.6z" />
+                        <path d="M46.5,26l1-2l1,2c0.3,0.7,1,1.1,1.8,1.1s1.5-0.4,1.8-1.1l2.5-5.1c0.4-0.9,0.1-1.9-0.8-2.3c-0.9-0.4-1.9-0.1-2.3,0.8
+                      l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1c-0.8,0-1.5,0.4-1.8,1.1l-1,2l-1.2-2.4c-0.4-0.9-1.5-1.2-2.3-0.8c-0.9,0.4-1.2,1.5-0.8,2.3
+                      l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1C45.5,27.2,46.2,26.7,46.5,26z" />
+                        <path d="M58.4,7.8H5.6c-2.4,0-4.3,2-4.3,4.4v21.2c0,2.4,1.9,4.4,4.3,4.4h31.7c1,0,1.8-0.8,1.8-1.8s-0.8-1.8-1.8-1.8H5.6
+                      c-0.4,0-0.8-0.4-0.8-0.9V12.2c0-0.5,0.4-0.9,0.8-0.9h52.9c0.4,0,0.8,0.4,0.8,0.9v21.2c0,0.5-0.4,0.9-0.9,0.9c-1,0-1.8,0.8-1.8,1.8
+                      s0.8,1.8,1.8,1.8c2.4,0,4.4-2,4.4-4.4V12.2C62.8,9.8,60.8,7.8,58.4,7.8z" />
+                        <path d="M61.1,44.3L47,37.2c-1-0.5-2.1-0.4-2.9,0.4c-0.7,0.7-0.9,1.9-0.4,2.9l7.1,14.1c0.5,1,1.5,1.6,2.5,1.6c0,0,0,0,0.1,0
+                      c0.9,0,1.7-0.6,2.1-1.4l1.8-4.1l4.1-1.8c0.8-0.4,1.4-1.2,1.4-2.1C62.7,45.8,62.1,44.8,61.1,44.3z M54.6,48.1l-1.5,3.3l-4.8-9.6
+                      l9.6,4.8L54.6,48.1z" />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== Team Section end ===== -->
+    <!-- ===== Roadmap Section start ===== -->
+
+    <section id="experience" class="a3p dark:a2 af a2E aw[120px]" style="margin-top: -5rem;">
+      <div class="ae">
+        <div class="wow fadeInUp a3t a3C aH[590px] a2G md:a30" data-wow-delay="0s">
+          <div style="width:100%; height:100%">
+            <img style="margin-left: auto;
+          margin-right: auto; margin-bottom: 2rem;
+          display: block;" src="images/skills/work.svg" alt="logo" class="floating" width="35%" />
+          </div>
+          <span class="a3q a2d a2B a1P aR sm:a1O"> Roadmap </span>
+          <h2 class="a3q a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]"> Work Experience </h2>
+          <blockquote>
+            <p class="a3q a1O a1R aQ dark:aS"> The only source of knowledge is experience. <i> — Albert Einstein</i>
+            </p>
+          </blockquote>
+        </div>
+        <div class="ag aa a1t">
+          <div class="ab ak lg:a33/12 xl:a2N/12">
+            <div class="wow fadeInUp af ag aa a1L md:a3H lg:a3I" data-wow-delay="0s">
+              <span class="aq a8 a3J ao a2w aD[2px] a3 dark:a1w[#2D2C4A] md:a3K/2 md:an"></span>
+              
+              <!-- Experience - VNS Health: Senior ML Engineer -->
+              <div class="ab ak md:a1M/2">
+                <div class=" a1H dark:a3F a3E a3D a2G a1G hover:a1H  dark:a3 af a2E a1W au a1v a3L aI dark:a3 md:a2k md:a1Q lg:a20">
+                  <span class="aq as/2 a1a ao a3M a1U at/2 a1u a3N a1H a1 dark:a3F dark:a3 md:a3b md:a3O md:an lg:a3P"></span>
+                  <span class="aq a3Q as/2 ao a3e a3f at/2 az a1v dark:a3 md:an"></span>
+                  <div class="a2c a1i" style="display: inline-block; margin-bottom: -20px;
+                      width: 100px;
+                      height: 100px;
+                      background: url(data:image/jpeg;base64,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);
+                      background-position: 50% 50%;
+                      background-size: cover;
+                      border-radius: 50%;">
+                  </div>
+                  <article>
+                    <div class="read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="40">
+                      <h6 class="a3q a2G a2B a1P a1k dark:aT"> VNS Health, New York </h6>
+                      <h6 class="a3q a2G aR a1O a1P a1k dark:a3R"> Senior ML Engineer </h6>
+                      <p class="a2s a3q a2G a1F aP aQ dark:aS">
+                        <i>(Dec'22 - Present)</i>
+                      </p>
+                      <ul style="list-style-type: square;" class="a3q a3S a1F  a1R aQ dark:aS">
+                        <li>Designs and implements scalable and reliable machine learning (ML) systems used to develop, test, and deploy machine learning models.</li>
+                        <li>Leverages technologies and platforms to support reproducible feature engineering and optimized machine learning model deployment at scale.</li>
+                        <li> Creates robust monitoring solutions to understand model performance and manage model life cycles via a centralized model registry.</li>
+                        <li>Partners with data scientists and IT data engineers to understand business priorities, frame machine learning problems, and architect machine learning solutions.</li>
+                        <li>Ensures data quality throughout all stages of acquisition and processing, including data sourcing/collection, ground truth generation, normalization, and transformation.</li>
+                        <li>Identifies gaps and evaluates relevant tools and cloud computing technologies as needed to improve machine learning processes and build effective solutions.</li>
+                        <br>
+                        <div class="ao dark:an"><p style="color:#E4F995">Technology Stack: Python, Airflow, Snowflake, Amazon AWS, SQL, Docker.</p></div>
+                        <div class="dark:ao"><p style="color:#F56297">Technology Stack: Python, Airflow, Snowflake, Amazon AWS, SQL, Docker.</p></div>                     
+                      
+                      </ul>
+                    </div>
+                  </article>
+                  <div class="a1N aa ac a1t a3G">
+                    <img src="images/skills/python.svg" width="30" height="30">
+                    <img src="images/skills/r.svg" width="30" height="30">
+                    <img src="images/skills/sql.png" width="30" height="30">
+                    <img src="images/skills/snowflake.png" width="30" height="30">
+                    <img src="images/skills/docker.svg" width="30" height="30">
+                    <img src="images/skills/airflow.png" width="30" height="30">
+                    <img src="images/skills/aws.png" width="30" height="30">
+                  </div>
+                </div>
+              </div>
+
+              <div class="ab ak md:a1M/2"></div>
+              <div class="ab ak md:a1M/2"></div>
+
+              <!-- Experience - EvolutionIQ: Senior ML Engineer -->
+              <div class="ab ak md:a1M/2">
+                <div class="a1H dark:a3F a3E a3D af a2E a1W au a1v a3L aI dark:a3 md:a2O md:a1Q lg:a3T">
+                  <span class="aq as/2 a1a ao a3M a1U at/2 a1u a3N a1H a1 dark:a3F dark:a3 md:a3U md:a3V md:an lg:a3W"></span>
+                  <span class="aq a3X as/2 ao a3e a3f at/2 az a1v dark:a3 md:an"></span>
+                  <div style="margin-top:auto; margin-bottom:auto;text-align:center;">
+                    <div class="a2c a1i" style="display: inline-block; margin-bottom: -20px;
+                        width: 100px;
+                        height: 100px;
+                        background: url(https://media-exp1.licdn.com/dms/image/C4E0BAQFiPpdqdX4yAA/company-logo_200_200/0/1659116138264?e=2147483647&v=beta&t=fvTz9M0MQZge4BoafjxVWe6GqvhsAXA_FvDIqLn6j8c);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                  </div>
+                  <article>
+                    <div class="read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="40">
+                      <h6 class="a3q a2G a2B a1P a1k dark:aT"> EvolutionIQ, New York </h6>
+                      <h6 class="a3q a2G aR a1O a1P a1k dark:a3R"> Senior ML Engineer </h6>
+                      <p class="a2s a3q a2G a1F aP aQ dark:aS">
+                        <i>(October'22 - Dec'22)</i>
+                      </p>
+                      <ul style="list-style-type: square;" class="a3q a3S a1F  a1R aQ dark:aS">
+                        <li>Build ML models for production use.</li>
+                        <li>Perform in-depth exploratory data analysis to scope ML opportunities, identify potential issues in the data, and lay the groundwork for model design, training & evaluation strategies.</li>
+                        <li> Suggest and implement new features to improve model performance and business logic.</li>
+                        <li>Write and review production-quality PRs daily.</li>
+                        <li>Translate client business problems into ML problems.</li>
+                        <li>Build scalable machine learning models for claim time series forecasting and NLP text understanding.</li>
+                        <li>Continue to grow and learn in the data & ML space with a focus on business problems that require making sense of large-scale structured and unstructured datasets.</li>
+                        <br>
+                        <div class="ao dark:an"><p style="color:#E4F995">Technology Stack: Python, Tensorflow, PyTorch, Dagster, BigQuery, Vertex AI, GCP, Terraform, Spark, Kubernetes.</p></div>
+                        <div class="dark:ao"><p style="color:#F56297">Technology Stack: Python, Tensorflow, PyTorch, Dagster, BigQuery, Vertex AI, GCP, Terraform, Spark, Kubernetes.</p></div>
+
+                       
+                      </ul>
+                    </div>
+                  </article>
+                  <div class="a1N aa ac a1t a3G">
+                    <img src="images/skills/python.svg" width="30" height="30">
+                    <img src="images/skills/tf.svg" width="30" height="30">
+                    <img src="images/skills/dagster.jpeg" width="30" height="30">
+                    <img src="images/skills/docker.svg" width="30" height="30">
+                    <img src="images/skills/kubernetes.svg" width="30" height="30">
+                    <img src="images/skills/bigquery.svg" width="30" height="30">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Experience - AT&T: Senior Data Scientist -->
+              <div class="ab ak md:a1M/2">
+                <div class=" a1H dark:a3F a3E a3D af a2E a1W au a1v a3L aI dark:a3 md:a2k md:a1Q md:a2L lg:a20">
+                  <span class="aq as/2 a1a ao a3M a1U at/2 a1u a3N a1H a1 dark:a3F dark:a3 md:a3b md:a3O md:an lg:a3P"></span>
+                  <span class="aq a3Q as/2 ao a3e a3f at/2 az a1v dark:a3 md:an"></span>
+                  <div style="margin-top:auto; margin-bottom:auto;text-align:center;">
+                    <div class="a2c a1i" style="display: inline-block; margin-bottom: -20px;
+                      width: 100px;
+                      height: 100px;
+                      background: url(https://www.att.com/shopcms/media/att/2014/global/social-logo/logo-att-color-trans-200x200.png);
+                      background-position: 50% 50%;
+                      background-size: cover;
+                      border-radius: 50%;"></div>
+                  </div>
+                  <article>
+                    <div class="read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="40">
+                      <h6 class="a3q a2G a2B a1P a1k dark:aT"> AT&T, New York </h6>
+                      <h6 class="a3q a2G a1O a1P aR"> Senior Data Scientist </h6>
+                      <p class="a2s a3q a2G a1F aP aQ dark:aS">
+                        <i>(June'22 - October'22)</i>
+                      </p>
+                      <ul style="list-style-type: square; justify-items: stretch;" class="a3q a3S a1F  a1R aQ dark:aS">
+                        <li>Working hand-in-hand with our industry partner on the cutting edge of the intersection of databases, knowledge graphs, and artificial intelligence.</li>
+                        <li>Contribute to the development of a product for solving real-world, large-scale problems using knowledge graph technology.</li>
+                        <li> Design and development of artificial intelligence and machine learning applications built upon the knowledge graph technology.</li>
+                        <br>
+                        <div class="ao dark:an"><p style="color:#E4F995">Technology Stack: Python, Azure Databricks, Pyspark, Palantir, REL, Julia, SQL.</p></div>
+                        <div class="dark:ao"><p style="color:#F56297">Technology Stack: Python, Azure Databricks, Pyspark, Palantir, REL, Julia, SQL.</p></div>
+                      </ul>
+                    </div>
+                  </article>
+                  <div class="a1N aa ac a1t a3G">
+                    <img src="images/skills/python.svg" width="30" height="30">
+                    <img src="images/skills/julia.svg" width="30" height="30">
+                    <img src="images/skills/databricks.svg" width="30" height="30">
+                    <img src="images/skills/mysql.svg" width="30" height="30">
+                  </div>
+                </div>
+              </div>
+              <div class="ab ak md:a1M/2"></div>
+              <div class="ab ak md:a1M/2"></div>
+
+              <!-- Experience - CHOP: Applied Data Scientist II-->
+              <div class="ab ak md:a1M/2">
+                <div class=" a1H dark:a3F a3E a3D af a2E a1W au a1v a3L aI dark:a3 md:a2O md:a1Q lg:a3T">
+                  <span class="aq as/2 a1a ao a3M a1U at/2 a1u a3N a1H a1 dark:a3F dark:a3 md:a3U md:a3V md:an lg:a3W"></span>
+                  <span class="aq a3X as/2 ao a3e a3f at/2 az a1v dark:a3 md:an"></span>
+                  <div style="margin-top:auto; margin-bottom:auto;text-align:center;">
+                    <div class="a2d a2c a1i" style="display: inline-block; margin-bottom: -20px;
+                      width: 100px;
+                      height: 100px;
+                      background: url(data:image/png;base64,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);
+                      background-position: 50% 50%;
+                      background-size: cover;
+                      border-radius: 50%;"></div>
+                  </div>
+                  <article>
+                    <div class="read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="40">
+                      <h6 class="a3q a2G a1O a1P a1k dark:aT"> Children's Hospital of Philadelphia </h6>
+                      <h6 class="a3q a2G a1O a1P aR"> Applied Data Scientist II </h6>
+                      <p class="a2s a3q a2G a1F aP aQ dark:aS">
+                        <i>(June'20 - June'22)</i>
+                      </p>
+                      <ul style="list-style-type: square; justify-items: stretch;" class="a3q a3S a1F  a1R aQ dark:aS">
+                        <li>Applying natural language processing methods to clinical text to extract structured information.</li>
+                        <li>Using the latest deep learning techniques to classify imaging studies.</li>
+                        <li>Applying statistical models (with a focus on Bayesian methods) to assist researchers in analyzing missing, erroneous, or incomplete patient data.</li>
+                        <li>Implement statistical and machine learning models, large-scale, cloa3Y data processing pipelines, and off the shelf solutions for test and evaluation; interpret data to assess algorithm performance.</li>
+                        <li>Develop novel ways to apply published machine learning models to imperfect clinical data including the development of training datasets.</li>
+                        <li>Develop high-quality, secure code implementing models and algorithms as application programming interfaces or other service-oriented software implementations.</li>
+                        <li>Manage and scale applications using container technology and cloa3Z managed services.</li>
+                        <br>
+                        <div class="ao dark:an"><p style="color:#E4F995">Technology Stack: Python, Apache Spark, BigQuery, Kubernetes, Argo, Dataflow, Apache Beam, Terraform, Docker, R.</p></div>
+                        <div class="dark:ao"><p style="color:#F56297">Technology Stack: Python, Apache Spark, BigQuery, Kubernetes, Argo, Dataflow, Apache Beam, Terraform, Docker, R.</p></div>
+                      </ul>
+                    </div>
+                  </article>
+                  <div class="a1N aa ac a1t a3G">
+                    <img src="images/skills/python.svg" width="30" height="30">
+                    <img src="images/skills/tf.svg" width="30" height="30">
+                    <img src="images/skills/docker.svg" width="30" height="30">
+                    <img src="images/skills/kubernetes.svg" width="30" height="30">
+                    <img src="images/skills/r.svg" width="30" height="30">
+                    <img src="images/skills/dataflow.svg" width="30" height="30">
+                    <img src="images/skills/terraform.svg" width="30" height="30">
+                    <img src="images/skills/bigquery.svg" width="30" height="30">
+                  </div>
+                </div>
+              </div>
+              <div class="ab ak md:a1M/2"></div>
+              <div class="ab ak md:a1M/2"></div>
+
+              <!-- Experience - VNS Health: Data Scientist -->
+              <div class="ab ak md:a1M/2">
+                <div class=" a1H dark:a3F a3E a3D a1H af a2E a1W au a1v a3L aI dark:a3  md:a2k md:a1Q md:a2L lg:a20">
+                  <span class="aq as/2 a1a ao a3M a1U at/2 a1u a3N a1H a1 dark:a3F dark:a3 md:a3b md:a3O md:an lg:a3P"></span>
+                  <span class="aq a3Q as/2 ao a3e a3f at/2 az a1v dark:a3 md:an"></span>
+                  <div style="margin-top:auto; margin-bottom:auto;text-align:center;">
+                    <div class="a2c a1i" style="display: inline-block; margin-bottom: -20px;
+                      width: 100px;
+                      height: 100px;
+                      background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMQEBMQEBMTEBAWFhYXGRYXFxkYGhgZGRgXGBsaGRYZHykhGR4nHBYZIjQiJiovLy8vGSE1OjUtOSkuLywBCgoKDg0OHBAQHCwnICYuLi4vLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQECAwj/xABKEAABAwIDBQUDBwcICwAAAAABAAIDBBEFEiEGBzFBURMiYXGBFHKRMjVzgqGysyMzQlJiksEXU3SxwtHT8RUWJCY0NlSDk6Lh/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAECAwQFBv/EADIRAAIBAgQBCgYCAwAAAAAAAAABAgMRBBIhMUEFEyIyUWFxgZGxFCOhweHwYtEkQvH/2gAMAwEAAhEDEQA/ALxREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBFwiA5RFwUByi1kmMwtnbTOkDZnNzNaeY158L6HTwWxCWsS4tWut9V3o7IiIQEXUlchAcouF1ugO6LrmC7IAi6udZcgoDlF5ukA4kDzNl2aboDsiIgCIiAIiIAiIgCIiAIiIDqVWu0b5qepc0SyAE5mHMeBJI0vyNx6Ky1GNusN7SDtWjvxXJ908fhx9F1YOoo1UpJWeh5nK1GdTDtwbvHXT6/TXyNxg1eKiBko4kajo4aEfFZrnWGvBQLYDEckjqdx7r9W+8Br8R91SPbKd8dDO6IEuyW01IDtHO9ASfRVxFDmqrh6eB08l1/jacGnq2k/Hb8lRYzWPrcQc+Mm75WiOxOgDg1hB5cAfVXnTMLWNaTmIABJ5kAaqot2GFdrWmUizIQXeBc7Rv9o+iuOyiu9VFcD6nl+cVUhh4bQjb14eiXqzlF4yytYC5zg1o4kkAD1XFLUslaHxuD2ngRwWHefP3V7cSEb48G9ow8zNF307hJ45D3XjysQ76i2O7LGfa8Nhc43kj/ACL/ADZoCfNmU+qk1TA2Rjo3jMx7S1w6gixHwVS7r53UGKVOFynRxdlvzdHcg/WiN/QLePTpOPFamMujUT4PQtiuq2wxSTSGzI2Oe49A0En7Aqo3SUrqyuqsUmGtyG9M8hu63usDR5OW+30Yz2FAIGmz6h2U/Rts5/x7rfrLfbAYL7Fh8MRFpCO0k99+pB8tB6JHo0m+3Ty4h9KqlwXuU/tfiklHjs9TCbSMlafBw7NgLT1BGiu/ZzG466mjqYT3XjUHi1w0c0+IKqwUMdRtNUQStzRyCRrh1Bgb8Dzv4LzwCuk2fxN9HUEmjlI754WOjJR5fJd5HoFvVgpxSXWST8UZU5OEm3s2yQ79h/sMH9IH4cizsX2hdh+B080djM6GCOO/AOcwd4jnYAm3ksHflrQQHiO3H4Uiz8V2ediOCU8DCBK2GB8ZPDM1gFieQIJF1lHLzcM22Zl3fPLLvZEUwXdxPicTKyuq33kAe0Edo7K7UElxs24scoGiwq+mrNnKiJ7JjNSPJGW5DHAWzMdGSQ19tQ4f3hZuEbdVmExspMQpHmOMBjXHuODRoAHWLJABpcHkpfhW3OG4iWRSBrZCe7HOxts3DuuN231ta91rKVVO8lePdtb7GcVTa0dpfcmNHUNljZIzVj2tc0+DhcfYV7rzijDWhrQGtAsABYADgAOQXouE7QiIgCIiAIiIAiIgOr3WCqrFt4s4nJgY3sWktDXtNzY8X6gt8tLc1a1lq8UwCnqR+WiY4/rWs4eThqrwlFbo7cBXw9KbdeGZW9PLZkVwfeXA+zahjonfrC7mfD5Q+BUwocQhqWF0MjJmcDlIPoRy8ioJi27BpJdTS26NkH9sC/2FSfZDZptDERfPM62d3lwaPAa/FWmqdrxOrHw5OdPPh5NSf+v/AHVerNpBhUMbg9kTGuHAhouPVZrm30K1+L41T0bM9TKyFvLMdT7reLj5BZVFVsmjbLE5skbwHNc03BBWbu9WeMlFaKxi4ZhMNN2nYsEed2Z1r2v4DkPAaLSbQbW9i98MTQZG6EnkbX0aNTxUsKjM+yccs8k8rszXOvkAy8gNXXueHgt6DpZm6u3ucvKDxc4rmH0m9W+y3a/Lv7CFy1FRWPsS6Z3Jo5fVGjfNWJs1RvgpmRyWDxmJA1tdxNr+qzaSjjhbkiY1jegFv81k2V8RiudWSMbRRz4Hk34ebqzm5Tatf91FlUW9qndRV9LikQ1zNDrc3R6gH3mXb5NVvKObeYGa6glgaLy2D4+XfYbgXPC+rfrLCjPJNN7bHoVY5o6FdVs7cZx+FjDnpYWtPUFrLSP/AHnuDD5K6FXe6jZCWhbPLVMDJnlrGi4dZjRe9x1ceH7AVhq1eScssdkrFaMXbNLdlQ4Z/wA2S+cn4DVM94WyrcRpS1oAqI7uicevNhPRwFvA2PJaOg2ZqW7QSVzo7Uzi+z8zecQaO7e/EKyFarO0oyi9kiKcLqSlxbPm7FdopJsNjw+ozdtTzjKSNcgZI0sd+01xt5W6FWxVbUDDcKoZnQuma+OFndcBlPZZgTf3StJvN2AkqZhVULA6R+krLhtyBpICdL6WPp4qYDZ5tThkVFVNI/IxtdYi7XtaNWnhcEK9SdOUYvhe7RnThNSku7Rm1w+qZVQRzAB0crGvANiLOF7Hr0Vcb29laWKlNXCxsEwkY0hndbJmNiC0aX53HQrDptmsbwwmOhlbUQXJABZbXn2cvyD7psu42KxTE5WOxWbs4Wm+QFpI6hjGd1pI0zE3HiohBQlmU1b94Ezk5xyuLuT3d/XST4ZTSy3MhZYk8Tlc5gcfMNB9VIlj0dMyGNkUYDY2NDWgcg0WA+xZC5pNNto6YqySCIigkIiIAiIgCIiALi65VI7ebxar2iakp3CmiikdGXN/OOyktJzH5A05a+K0pUpVHaJnUqKCuy0toNp6Whbepma13Jg7zz5MGvqdFV20e9uaW7KJns7P5x9nSHyHyWf+yjWAbGV2Iu7RrHBjjczzEgHxu7vSegPmrS2c3WUlNZ9RerlGvfFowfCMcfrXXTlo0utqznzVanV0RSVbJNKfaJjJIXkgSvzHMRqQHHja/AcLq1NxTpi2pu4+ytLQ1p4CQ3JLendtfzCi+9zFGy1/YR2ENOwRgAWAce8+w/dH1Va+7vChRYbCx/de5vayX0s6TvWPkCB6K9epeirrcpRhaq7PYlJKg2O7woaefsWM7ZrTZ7w4Cx5hv6xHPUKZx1DH6NeHHoCP4KMYxsDS1BLmA07ybkstlJ8WHT4WXFBxT6R7eBlhM/8AkpuPC3b2u2vo/JmVhO2dHU2DZRG4/oyWafQ8D6FSJrgeCpzFd3dVDd0Np2/s6EebHfwJUx3e4FPTRl07njMAGxFxIaBzsTZpPQeqtOELXizsx2DwcKXPYeqn/F7/ANrzS8SaKPbdYpLSYfPUQFolYGZS4Zhq9jTpz0JUhUT3p/NFV5R/ixqkFea8UeLN2i2d93ONTV1A2oqC0yF8g7rcos11hopSq13UY3TQYayOaogif2kpyvka02LtNCVMf9aaH/q6b/ys/vV6sbTaS4lacrxV2RKv2tqWY9Hh7XM9mc5gIyjNrFmPe81YoVL1VXHNtRDJE9kjC+OzmODgbQkHUKytq9qIcNh7WYkucbMY35Tzzt0A5kq1SHVUVq19SlOfWbezN8iqj+UXE3t7aLDSafiDklddvXOAAfMCylexW20OJgtaDDOwXdE4304ZmO/SF9ORHMahUlRnFXZeNaMnZEsRababaGHD4DPOTa9msGrnutfK0fx4BV7FvPr5iZKbDjJADxa2WQ28XsFr+iQpTkroTqxi7MtsKCb1Npp8OigfTFjXPc8OzNzaBoItrpqtTXb2WtpWyxwj2gSdnLDI8tLO645mkC5F221AI+F8PfRUmWhoJSMpkzPt0zRNNvtWlKlJVI51o2Z1KqcHlZatBKXxRvd8pzGE+ZAJ/rWvwTaWmrXSsppDI6IgPGVzbXJH6QF9Wngo/tPtRPh8FH7PTGq7SM5rZ+7lbFb5DTxznj0VZbFbVz0MlQ+ClNSZS0uAz9yxebd1p/WPHolOg5wb9NSZ1lGSXqW7vFxqWhoH1FOWiQPjAzDMLOdY6LM2MxKSqoKeomIMsjLuIFhfMRoOXBQ3bnFJKvZ8VEsRgkfIy8Zv3bTFv6QB4C/Dmtbge3b6ehpaOhpn1lSyIF+UOc2O7nEAhgJJt5AXUqi5U9Frf7EOqlPV6WLhRVZg+9V4nEGI0/styBnAc3JfgXxv1DfG6tIFYzpyg7SRrCaktDlERULhRmn2IomVElUYRJM97pCXkvDXONyWtOg114KTIpTa2IcU9zgBYONYg2lp5qh/yY2OefGwJA9Tp6rPVab7sX7OlipWnWZ+Z3uR2NvVxb8FanDPJRK1JZYuRWmyOHOxHEomSd/tJDLKerQS99/Ph9ZfRldTNmifE75LwW/FVfuMwazZ61w42hjPgO88+pyD6pVsFbYqd6llwMcPTXN68SpqKZ1FVBxGsZLXDhfk7z01HorWhkDmhwNwQCD1BUH2/wAOyubUtGh0d4OHAnzAt6BbTYTETJAYje8ZsD4HUC/hqPgunFfOpRrrwZ4/Jr+FxM8HLZ6x/e9fVMlCALlF5p9CFE96fzRVeUf4saliie9P5oqvKP8AFjV6fXXiilTqPwZAtgt3dNiFE2pmknY8ve0iNzA2zXWGjmE/apH/ACOUP87V/vxf4SzdzfzVH9JL98qcrarWqKbSk9zKnSg4JtIomiwWOg2jgpYi90bHsILyC7vREm5aAOfRem8LEHOx1odC6rbAIw2AX7/5MSnRoJOrrnQ6N6LYYsf97Ivei/AK2O8vBpoKuHGKNpe6LL2rQL2DbjMQNcpaS024DXxGyl045uMf3+jLL0XbhI5G8mtGn+iKj4S/4SjGGy1L8ahrWUNRSNfKwSN7OTLZ/ce4uLAACDc+OqmVJveonRB0jJ45LasDQ7XweDYjxNli7JbQ1+K4gZ4y+nwxnFhawh9hYNzlty4nU2OgFlRJwTeS2nFv6FnaTSzX9DX7wYvbcdpKKQnsQ1mnD5bnOfY+IY1vorYp4GRsayNoYxoAa1osABoAAq63r4BMXw4nSAmaAAODRd1muzteBzAJdcdCumF74aZ0QNTFKyUDURgPY49WkkEA9D8SqShKpTjk1t7l4zUJyzcTA35YRE0QVbWhsr3mN5GmYZS4E9SMtr+K8N7XzZhnuD8Fi0W8DH5sSjjqzEYKFshjhDjq95aS5/Q2DLaaDhc6re72vmzDPcH4TFvTi4umnvdmMmnna7F7ltYX+Yh+jZ90Kstyv/EYj77PvyqzcL/MRfRx/dCpfBMbdgWJVUVVE90Urjq217B7ix7b2DmkOIP/AMXNRWaM4rf8m9VqMoye34J1vj+apPpIfvhe26igZFhcLmgB8uaR7ubiXOAufBoA9Fp94mMR1uA+0xBwjkkjtmAB7spabgE82lSTdr800n0Z+85GmqFv5fYLWrfuI3vvw5jqOOosO1jla0O55Xh1236XAKmOx8pfh1G9xu51PCSTzJjabqNb6/mz/vR/1OUj2J+bKH+jQfhtUSfyY+L9kSl81+CN2uV1RYZUa3OyIikkLQbXbMQ4jAYpe64XLJALuY7qOo6jmt+ilNp3RDSaszVbM4O2hpYqVhzCNti61sziSXOtyuSStqiKG7u7JStoEREJuwiIhAXjPA2Rpa9rXtPFrgCDz1B8QvZEB4U1MyNuWNjY23vZoDR8AvdEQGIaCIydqY4zJ+vlbm00HetdZS5RAamfZykkf2j6Wne/jmdEwm/mQtlFGGgNaA0DQACwHkF6ImpFkFqp9nqSR/aPpYHycc7omF1/Mi62qIGrmLUUMcjQ2SNj2t4BzQQOWgPDRcT4fFI0Nkjje1vyQ5jSG8tARostEJOjWgCw0A5BeFbQRTjLNGyVvR7Q4fAhZSIDDGHQ9mIeyj7IcI8jcg1vo21uOq94IWsaGMa1jRwa0AAeQHBeqIRYx6qlZKMsjGyN42cA4X62K7xRhjQ1oDWgAAAWAA4AAcAvVEJCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiA//2Q==);
+                      background-position: 50% 50%;
+                      background-size: cover;
+                      border-radius: 50%;"></div>
+                  </div>
+                  <article>
+                    <div class="read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="40">
+                      <h6 class="a3q a2B a2G a1P a1k dark:aT"> VNS Health, New York </h6>
+                      <h6 class="a3q a1O a2G a1P aR"> Data Scientist </h6>
+                      <p class="a2s a3q a1F a2G aP aQ dark:aS">
+                        <i>(February'19 - June'20)</i>
+                      </p>
+                      <ul style="list-style-type: square; justify-items: stretch;" class="a3q a3S a1F  a1R aQ dark:aS">
+                        <li>Develop, build, test and deploy machine learning algorithms to support development of business processes for healthcare organization and subsidiary health plan provider, to improve business outcomes and quality of care.</li>
+                        <li>Create and maintain framework for deploying machine learning algorithms using APIs.</li>
+                        <li>Utilize resulting applications to implement, track and monitor predictive models used to guide business decisions.</li>
+                        <li>Engineer computational solutions and develop algorithms and applications to meet the predictive needs of clinical and business units across the Visiting Nurse Service of New York.</li>
+                        <li>Identify clusters of sub-populations of patients who may benefit from targeted care-management strategies: improves positive predicted value for patient outcomes based on sub-modeling for each cluster.</li>
+                        <li>Ensure accuracy of deployed algorithms is monitored on an ongoing basis; alert management when algorithm performance declines, identify causes.</li>
+                        <li>Ensure data quality throughout all stages of acquisition and processing, including sourcing, collection, ground truth generation, normalization & transformation.</li>
+                        <br>
+                        <div class="ao dark:an"><p style="color:#E4F995">Technology Stack: R, SQL, Python, Random Forest, XGBoost, Light GBM, Regression, Clustering, KNN, GBM, PCA, SVD.</p></div>
+                        <div class="dark:ao"><p style="color:#F56297">Technology Stack: R, SQL, Python, Random Forest, XGBoost, Light GBM, Regression, Clustering, KNN, GBM, PCA, SVD.</p></div>
+                      </ul>
+                    </div>
+                  </article>
+                  <div class="a1N aa ac a1t a3G">
+                    <img src="images/skills/r.svg" width="30" height="30">
+                    <img src="images/skills/spark.png" width="30" height="30">
+                    <img src="images/skills/sql.png" width="30" height="30">
+                  </div>
+                </div>
+              </div>
+              <div class="ab ak md:a1M/2"></div>
+              <div class="ab ak md:a1M/2"></div>
+
+              <!-- Experience - Jvion: Data Scientist -->
+
+              <div class="ab ak md:a1M/2">
+                <div class=" a1H dark:a3F a3E a3D af a2E a1W au a1v a3L aI dark:a3 md:a2O md:a1Q lg:a3T">
+                  <span class="aq as/2 a1a ao a3M a1U at/2 a1u a3N a1H a1 dark:a3F dark:a3 md:a3U md:a3V md:an lg:a3W"></span>
+                  <span class="aq a3X as/2 ao a3e a3f at/2 az a1v dark:a3 md:an"></span>
+                  <div style="margin-top:auto; margin-bottom:auto;text-align:center;">
+                    <div class="a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                      width: 100px;
+                      height: 100px;
+                      background: url(https://pbs.twimg.com/profile_images/1326955537225953280/fEZ_ch9y_400x400.jpg);
+                      background-position: 50% 50%;
+                      background-size: cover;
+                      border-radius: 50%;"></div>
+                  </div>
+                  <article>
+                    <div class="read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="40">
+                      <h6 class="a3q a2G a2B a1P a1k dark:aT"> Jvion </h6>
+                      <h6 class="a3q a2G a1P a1k dark:aT"> Data Scientist </h6>
+                      <p class="a2s a3q a2G a1F aP aQ dark:aS">
+                        <i>(June'17 - Jan'19)</i>
+                      </p>
+                      <ul style="list-style-type: square; justify-items: stretch;" class="a3q a3S a1F  a1R aQ dark:aS">
+                        <li>Design statistical models/programs using R/Python to successfully test hypotheses and answer targeted questions in healthcare outcomes research.</li>
+                        <li>Design algorithms for the recommended actions/interventions that will best prevent adverse events and deterioration.</li>
+                        <li> Cluster analysis for identifying sub-populations of complex patients who may benefit from targeted care management strategies and improvising positive predicted value for patient outcome by sub-modelling on each cluster.</li>
+                        <li>Perform analysis on the targets including hospital readmission among Acute Myocardial Infarction (AMI) patients, IP visits, ER visits, MRSA among diabetes patients, congestive heart failure,Clostridium difficile (C. diff.), pressure injury,sepsis and fall-injury.</li>
+                        <li>Writing complex SQL queries for data investigation and mapping to extract data for analysis.</li>
+                        <li> Build algorithms to reduce predictive analytics in driving population-level insights and the expected ROI from predictive population health analytic solutions.</li>
+                        <li>Report and visualize results of statistical analyses, in the form of graphs, charts, and tables using Tableau.</li>
+                        <br>
+                        <div class="ao dark:an"><p style="color:#E4F995">Technology Stack: R, SQL, Python, Apache Spark, Tableau, H2O, Random Forest, XGBoost, HDBSCAN Clustering, KNN, GBM, PCA, SVD.</p></div>
+                        <div class="dark:ao"><p style="color:#F56297">Technology Stack: R, SQL, Python, Apache Spark, Tableau, H2O, Random Forest, XGBoost, HDBSCAN Clustering, KNN, GBM, PCA, SVD.</p></div>                     
+                      </ul>
+                    </div>
+                  </article>
+                  <div class="a1N aa ac a1t a3G">
+                    <img src="images/skills/r.svg" width="30" height="30">
+                    <img src="images/skills/python.svg" width="30" height="30">
+                    <img src="images/skills/aws.png" width="30" height="30">
+                    <img src="images/skills/spark.png" width="30" height="30">
+                    <img src="images/skills/tableau.png" width="30" height="30">
+                    <img src="images/skills/h2o.svg" width="30" height="30">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="aq a1a a2J a2Z">
+        <img src="images/shapes/timeline.svg" alt="shape" />
+      </div>
+    </section>
+    <!-- ===== Roadmap Section end ===== -->
+    <!-- TESTIMONIALS -->
+    <section class="a3p a1J[120px] a1T dark:a2" style="margin-top: -8rem;">
+      <div class="ae">
+        <div style="width:100%; height:100%">
+          <img style="margin-left: auto;
+    margin-right: auto; margin-bottom: 3rem;
+    display: block;" src="images/testimonial/linkedin.svg" alt="logo" class="floating" width="30%" />
+        </div>
+        <div class="wow fadeInUp a3t a3C aH[590px] a2G md:a30" data-wow-delay="0s">
+          <span class="a3q a2d a2B a1P aR sm:a1O"> Testimonials </span>
+          <h2 class="a3q a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]"> Linkedin Recommendations </h2>
+          <blockquote>
+            <p class="a3q a1O a1R aQ dark:aS"> Life is 10% what happens to you and 90% how you react to it. <i> — Charles R. Swindoll</i>
+            </p>
+          </blockquote>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div id="customers-testimonials" class="owl-carousel">
+              <!--TESTIMONIAL 1 -->
+              <div class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40" data-wow-delay="0s">
+                <div class="aq a19 a8 a2I[-1] a3_[10px]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+                </div>
+                <div class="shadow-effect">
+                  <div class="aq a19 a8 a2I[-1]">
+                    <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                  </div>
+                  <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                    <a href="https://www.linkedin.com/in/byron-ruth/)" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                      <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C4E03AQFiEgaFlt1TDQ/profile-displayphoto-shrink_400_400/0/1658759362429?e=1678320000&v=beta&t=6LJbf5wWqg7TtYpvYmPV-Z66ky7FU0C3ja5LfpQubGs);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                    </a>
+                  </div>
+                  <h6 class="a3q a2G a2B a1P a1k dark:aT"> Byron Ruth </h6>
+                  <h6 class="a3q a2G a1O a1P a1k dark:aT"> Director of Developer Relations </h6>
+                  <h6 class="a3q a2G a41 a1P aR dark:aR"> Synadia, Los Angeles, CA </h6>
+                  <article>
+                    <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="30">
+                      <p class="a3q a1F a1R a2f aQ dark:aS"> “I interfaced with Rushabh on a semi-regular basis. The team he was on were active users of computational environment my team and I built for biomedical research. They were essentially dog-fooding this environment on behalf of the overarching program our teams were apart of. The basis reasoning was that if it didn't work for Rushabh and the team he was on, it likely wouldn't work for anyone else. Rushabh was very helpful in the early design and testing phases and provided thoughtful, constructive feedback as well as contributed code changes. He promoted the environment and help teach other researchers how to use it effectively. It was a pleasure to work with Rushabh and if our paths cross again, I would be delighted to work with him.” </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 1 -->
+              <!--TESTIMONIAL 2 -->
+              <div class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40" data-wow-delay="0s">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+                </div>
+                <div class="shadow-effect">
+                  <div class="aq a19 a8 a2I[-1]">
+                    <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                  </div>
+                  <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                    <a href="https://www.linkedin.com/in/harivony-rakotoarivelo-32214219/)" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                      <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C4E03AQHuA_vat-g3gA/profile-displayphoto-shrink_400_400/0/1599246157511?e=1678320000&v=beta&t=ZzgiJHEz2EYaBeZSxAY0QgOWThy79kwVujDicWzhZ5M);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                    </a>
+                  </div>
+                  <h6 class="a3q a2G a2B a1P a1k dark:aT"> Harivony Rakotoarivelo </h6>
+                  <h6 class="a3q a2G a1O a1P a1k dark:aT"> Manager, Data Science </h6>
+                  <h6 class="a3q a2G a41 a1P aR dark:aR"> VNS Health, NYC, New York </h6>
+                  <article>
+                    <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="30">
+                      <p class="a3q a1F a1R a2f aQ dark:aS"> “Rushabh was a great colleague and a valuable contributor to our team at the Visiting Nurse Service of New York. He is curious, strong technically and an avid problem solver. As a teammate, he was always able to bring fresh perspectives to the problem at hand and willing to transfer knowledge. Rushabh would be an asset to any team.” </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 2-->
+              <!--TESTIMONIAL 3 -->
+              <div class=" a1H dark:a3F a3E a3D  a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40" data-wow-delay="0s">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+                </div>
+                <div class="shadow-effect">
+                  <div class="aq a19 a8 a2I[-1]">
+                    <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                  </div>
+                  <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                    <a href="https://www.linkedin.com/in/naomi-s-354a466/)" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                      <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C4D03AQG56y3Qq3A0lw/profile-displayphoto-shrink_400_400/0/1642190544500?e=1678320000&v=beta&t=cuc2pCbAieY6G1BYg0JTu_tQvsi6GLKJ81RDJl7y_aU);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                    </a>
+                  </div>
+                  <h6 class="a3q a2G a2B a1P a1k dark:aT"> Naomi Shinoda </h6>
+                  <h6 class="a3q a2G a1O a1P a1k dark:aT"> Director, Data Science </h6>
+                  <h6 class="a3q a2G a41 a1P aR dark:aR"> VNS Health, NYC, New York </h6>
+                  <article>
+                    <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="30">
+                      <p class="a3q a1F a1R a2f aQ dark:aS"> “Having served as Rushabh's manager at the Visiting Nurse Service of New York, I can attest to his dedication, discipline, and his passion to continually grow in his field. Rushabh elevated our data science team with his positive energy, his computer science knowledge, and his "nothing is impossible" approach to data science problems. Always eager to learn in what ways he can improve, Rushabh is the epitome of the "Ideal Team Player" (as introduced in the book by Patrick Lencioni): humble, hungry, and smart. ” </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 3-->
+              <!--TESTIMONIAL 4 -->
+              <div class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40" data-wow-delay="0s">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+                </div>
+                <div class="shadow-effect">
+                  <div class="aq a19 a8 a2I[-1]">
+                    <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                  </div>
+                  <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                    <a href="https://www.linkedin.com/in/natalievarrialekasana/)" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                      <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C4E03AQGlEFdvl9WnUw/profile-displayphoto-shrink_400_400/0/1559182146426?e=1678320000&v=beta&t=h93MIW3WbVfhHbGJOP_UjW0UMyNpBh1xBu6HYzHflbw);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                    </a>
+                  </div>
+                  <h6 class="a3q a2G a2B a1P a1k dark:aT"> Natalie Kasana </h6>
+                  <h6 class="a3q a2G a1O a1P a1k dark:aT"> Data Science Commercial Excellence Manager </h6>
+                  <h6 class="a3q a2G a41 a1P aR dark:aR"> Pfizer, NYC, New York </h6>
+                  <article>
+                    <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="30">
+                      <p class="a3q a1F a1R a2f aQ dark:aS"> “Rushabh is one of the best colleagues I’ve ever worked with. He is efficient, creative, and very technically strong. He always tries to find a solution to complex problems and never says something can’t be done. He would be a great asset to any team. ” </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 4-->
+              <!--TESTIMONIAL 5 -->
+              <div class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40" data-wow-delay="0s">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+                </div>
+                <div class="shadow-effect">
+                  <div class="aq a19 a8 a2I[-1]">
+                    <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                  </div>
+                  <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                    <a href="https://www.linkedin.com/in/oude-gao-338784104/)" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                      <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C5603AQHavYH8SbLVNw/profile-displayphoto-shrink_400_400/0/1549296769992?e=1678320000&v=beta&t=eAnEy2N0CTTIdT0Fd7CBWq2HIDQcMwJ4nIucx2uid9g);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                    </a>
+                  </div>
+                  <h6 class="a3q a2G a2B a1P a1k dark:aT"> Oude Gao </h6>
+                  <h6 class="a3q a2G a1O a1P a1k dark:aT"> Manager, Health Economics </h6>
+                  <h6 class="a3q a2G a41 a1P aR dark:aR"> VNS Health, NYC, New York </h6>
+                  <article>
+                    <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="30">
+                      <p class="a3q a1F a1R a2f aQ dark:aS"> “Rushabh was a great colleague of mine and a valuable asset to the team at VNSNY. As a data scientist, he became the true pioneer and created brilliant solutions to roadblocks that we were not able to break through in the field of machine learning and predictive modeling in production. His knowledge from his master/PhD study helped me personally on questions I encountered in my work, as well as the way I think about the technical side of my tasks. He's a go-getter, a person that never lets you down, and a genuine friend. I truly believe he still has great potential unrealized and would recommend him as a great fit for a lead data scientist role. ” </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 5-->
+              <!--TESTIMONIAL 6 -->
+              <div class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40" data-wow-delay="0s">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+                </div>
+                <div class="shadow-effect">
+                  <div class="aq a19 a8 a2I[-1]">
+                    <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                  </div>
+                  <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                    <a href="https://www.linkedin.com/in/richard-dewald-7703904/)" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                      <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C4E03AQGKp-Rc4wM23Q/profile-displayphoto-shrink_400_400/0/1517683887821?e=1678320000&v=beta&t=E5A6UP8LyJlgnNurDvfxAKE-0SRVI9edDn8x96BcLlw);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                    </a>
+                  </div>
+                  <h6 class="a3q a2G a2B a1P a1k dark:aT"> Richard DeWald </h6>
+                  <h6 class="a3q a2G a1O a1P a1k dark:aT"> Nurse Informaticist </h6>
+                  <h6 class="a3q a2G a41 a1P aR dark:aR"> VNS Health, NYC, New York </h6>
+                  <article>
+                    <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="30">
+                      <p class="a3q a1F a1R a2f aQ dark:aS"> “Rushabh Patel is far and away one of the most talented analysts and programmers I have had the pleasure of working with in my career. Not only does he have significant skills and training, he brings a curiosity, dedication to self-instruction, and ease with collaboration that is every bit as valuable, if not more than, his raw skills, extensive training, and meaningful accomplishments. He made me better at my job when I worked with him. He made my colleagues better. He made our organization function better. He left work with us which represents a first in my company's 125+ year history. Mr. Patel was a distinct pleasure to have as a colleague. I quickly learned that when he asked me for something he had already done extensive research into the problem on his own, I wouldn't be able to add to what he knew with a simple google search or by reading the relevant reference material. When I gave him advice, he took it. I can't tell you how rare that is. I never had to tell him something twice. Often after I did point him towards a solution he would circle back to me to explain what he found and offer more information he thought might help me that he came across in the process. When he moved on from our organization I was ambivalent. On the one hand, I was thrilled to see him get an opportunity he richly deserves, on the other I genuinely grieved the loss. Mr. Patel is a role model. I'm happy to know him.” </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 6-->
+              <!--TESTIMONIAL 7 -->
+              <div class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40" data-wow-delay="0s">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+                </div>
+                <div class="shadow-effect">
+                  <div class="aq a19 a8 a2I[-1]">
+                    <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                  </div>
+                  <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                    <a href="https://www.linkedin.com/in/soy-chen-40a16932/)" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                      <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C5603AQEaWljEzLb_GA/profile-displayphoto-shrink_400_400/0/1615096820387?e=1678320000&v=beta&t=8YIlSdnlGGKiHcyzzg146fg6_zoLATx_45bU4Axhhmo);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                    </a>
+                  </div>
+                  <h6 class="a3q a2G a2B a1P a1k dark:aT"> Soy Chen </h6>
+                  <h6 class="a3q a2G a1O a1P a1k dark:aT"> Chief Data Scientist </h6>
+                  <h6 class="a3q a2G a41 a1P aR dark:aR"> Jvion, John Creek, GA </h6>
+                  <article>
+                    <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="30">
+                      <p class="a3q a1F a1R a2f aQ dark:aS"> “I highly valued Rushahb's contribution and energy during his time on our Data Science team. He approached challenges with enthusiasm and always brought back interesting insights to share with the rest of the team. His energy compelled and excited us to incorporate new ideas. I could always count on Rushabh. He is thorough yet thoughtful. Rushabh knows how to navigate tricky team dynamics, negotiate for resources, and prioritize complex timelines. I have countless team successes directly attributed to him. Rushabh would no doubt be a great asset on any Data Science team out there and I still immensely appreciate our continued exchange.” </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 7-->
+              <!--TESTIMONIAL 8 -->
+              <div class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40" data-wow-delay="0s">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+                </div>
+                <div class="shadow-effect">
+                  <div class="aq a19 a8 a2I[-1]">
+                    <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                  </div>
+                  <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                    <a href="https://www.linkedin.com/in/shengqiang-chen-879337a7/)" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                      <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C4E03AQGnkDZEbstH1g/profile-displayphoto-shrink_400_400/0/1517461585912?e=1678320000&v=beta&t=UORiq7fX5T-Sc-hWDlweYVy2t-NkkybkSa1hAljvjHI);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                    </a>
+                  </div>
+                  <h6 class="a3q a2G a2B a1P a1k dark:aT"> Shengqiang Chen </h6>
+                  <h6 class="a3q a2G a1O a1P a1k dark:aT"> Data & Applied Scientist </h6>
+                  <h6 class="a3q a2G a41 a1P aR dark:aR"> Microsoft, Atlanta, GA </h6>
+                  <article>
+                    <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="30">
+                      <p class="a3q a1F a1R a2f aQ dark:aS"> “It is my pleasure to write this recommendation, as it was great to work with Rushabh in the same team. He is the most dedicated and resourceful professional in accomplishing the most challenging of tasks beyond your expectations. He possesses a deep understanding of analytics, shows excellent attention to detail, and has a great sense of humor. I and my colleagues are always impressed with his positive "can do" attitude and we are confident in all his professional abilities on any project. ” </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 8-->
+              <!--TESTIMONIAL 9 -->
+              <div class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40" data-wow-delay="0s">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+                </div>
+                <div class="shadow-effect">
+                  <div class="aq a19 a8 a2I[-1]">
+                    <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                  </div>
+                  <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                    <a href="https://www.linkedin.com/in/suryavadlamani/)" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                      <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C5603AQFjOgW-6lc5DA/profile-displayphoto-shrink_400_400/0/1652406744220?e=1678320000&v=beta&t=TY4kd0QWOgtbWftXnILAEbnq4VxuZF9AKLxnLVp7aVw);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                    </a>
+                  </div>
+                  <h6 class="a3q a2G a2B a1P a1k dark:aT"> Surya Vadlamani </h6>
+                  <h6 class="a3q a2G a1O a1P a1k dark:aT"> Sr. Director, Software Engineering </h6>
+                  <h6 class="a3q a2G a41 a1P aR dark:aR"> Evernorth, Atlanta, GA </h6>
+                  <article>
+                    <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="30">
+                      <p class="a3q a1F a1R a2f aQ dark:aS"> “I have had the opportunity to work with Rushab for about 2 years when he was a data scientist at Jvion. In addition to possessing thorough skills and knowledge of AI and ML techniques and applying them to the models he built, he also thinks about the operational side of these models in supporting business in tracking daily and periodic performance variability of the models. In addition to the skills required to be a good data scientist, he is a solid team player and possesses a great attitude towards work which is often visible in times of uncertainty i.e aggressive timelines, changing requirements, not so clean input data etc. He would be a great asset to any team.” </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 9-->
+              <!--TESTIMONIAL 10 -->
+              <div class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40" data-wow-delay="0s">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+                </div>
+                <div class="shadow-effect">
+                  <div class="aq a19 a8 a2I[-1]">
+                    <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                  </div>
+                  <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                    <a href="https://www.linkedin.com/in/victor-cheng-wei/)" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                      <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C4E03AQEfDVY6Jm4aAQ/profile-displayphoto-shrink_400_400/0/1602279291027?e=1678320000&v=beta&t=vrpHMX9Ly5PMjhoAq24zH5Ev2J0H7RpPdik78TqeZR8);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                    </a>
+                  </div>
+                  <h6 class="a3q a2G a2B a1P a1k dark:aT"> Cheng Wei </h6>
+                  <h6 class="a3q a2G a1O a1P a1k dark:aT"> Senior Data & Applied Scientist </h6>
+                  <h6 class="a3q a2G a41 a1P aR dark:aR"> Microsoft, Atlanta, GA </h6>
+                  <article>
+                    <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="30">
+                      <p class="a3q a1F a1R a2f aQ dark:aS"> “Rushabh is one of the most amazing co-workers I've ever had. He has profound knowledge in data science and engineering. He is dedicated and he really owns what he does. From business insight, data engineering, machine learning to production, he successfully finished over dozens of project when we were working together at Jvion, followed by significantly positive results. Rushabh is always your go-to person whenever there is any problem on not just my code but also on the business process. He is definitely an invaluable employee to any company. ” </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 10-->
+              <!--TESTIMONIAL 11 -->
+              <div class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40" data-wow-delay="0s">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+                </div>
+                <div class="shadow-effect">
+                  <div class="aq a19 a8 a2I[-1]">
+                    <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                  </div>
+                  <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                    <a href="https://www.linkedin.com/in/rahuljoshiitb/)" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                      <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C4E03AQHwgETxnGDrEw/profile-displayphoto-shrink_400_400/0/1517754350148?e=1678320000&v=beta&t=ijp0ltuE71dt7yb7TiB8DWbFu2qGeBjHattmmlTyFHU);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                    </a>
+                  </div>
+                  <h6 class="a3q a2G a2B a1P a1k dark:aT"> Rahul Joshi </h6>
+                  <h6 class="a3q a2G a1O a1P a1k dark:aT"> Associate Professor </h6>
+                  <h6 class="a3q a2G a41 a1P aR dark:aR"> SIU, Pune, India </h6>
+                  <article>
+                    <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="30">
+                      <p class="a3q a1F a1R a2f aQ dark:aS"> “Rushabh is a bright student from his batch. He is quick learner and person with go getter attitude. Wherever he will work or go, I am sure he will be definitely create his creative work footprints over there. Best luck and a ton of wishes to your career journey - Rahul Joshi, Assistant Prof. Symbiosis Institute of Technology, Pune. ” </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 11-->
+              <!--TESTIMONIAL 12 -->
+              <div class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40" data-wow-delay="0s">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+                </div>
+                <div class="shadow-effect">
+                  <div class="aq a19 a8 a2I[-1]">
+                    <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                  </div>
+                  <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                    <a href="https://www.linkedin.com/in/yanhui-guo-63025b39/)" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                      <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C5603AQFye_tT5xsKsw/profile-displayphoto-shrink_400_400/0/1516812958188?e=1678320000&v=beta&t=zFnUcteBYqxetCUlKk-O5a2X55lWyX1h79oXZvpBLeM);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                    </a>
+                  </div>
+                  <h6 class="a3q a2G a2B a1P a1k dark:aT"> Yanhui Guo </h6>
+                  <h6 class="a3q a2G a1O a1P a1k dark:aT"> Associate Professor </h6>
+                  <h6 class="a3q a2G a41 a1P aR dark:aR"> UIS, Springfield, IL </h6>
+                  <article>
+                    <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="30">
+                      <p class="a3q a1F a1R a2f aQ dark:aS"> “Rushabh joined me as a Research Assistant in January’16. I supervised him for project, “A Novel Computer Aided Diagnosis System for Breast Cancer Based on Reinforcement Sample Learning Strategy for Convolution Neural Network”, “Big Data Analytics on SIU hospital data” and “Edge detection using convolution neural network”. Rushabh presented outstanding commitment to his studies, and finished his degree within the top 1% of his class. He is a quite remarkable student with a strong research interest. Among his peers, he stood out by always being up-to-date with currently topical discussions even within niches of this research. The quality of his research work on project was compelling, and he managed to find beautifully simple solutions to very challenging problems. With his multicultural background and fluent proficiency of English, he could approach many scientific questions from different angles. It was a pleasure working with Rushabh for the past 1 year. Rushabh is a person with a strong analytical approach. He sees and can address everything from the big picture to the details. Rushabh is creative, energetic, solutions oriented and highly motivated with great communication skills. I strongly recommend him for any professional or research oriented job.” </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 12-->
+              <!--TESTIMONIAL 13 -->
+              <div class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40" data-wow-delay="0s">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+                </div>
+                <div class="shadow-effect">
+                  <div class="aq a19 a8 a2I[-1]">
+                    <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                  </div>
+                  <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                    <a href="https://www.linkedin.com/in/fran%C3%A7ois-giraa42/)" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                      <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C5603AQFtgRv7irs5gw/profile-displayphoto-shrink_400_400/0/1657293145921?e=1678320000&v=beta&t=Zb254FLSjYoj35AmICUIFfJh7h5fFUfCe6pUC853ue4);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                    </a>
+                  </div>
+                  <h6 class="a3q a2G a2B a1P a1k dark:aT"> François Giraa43 </h6>
+                  <h6 class="a3q a2G a1O a1P a1k dark:aT"> Associate Professor </h6>
+                  <h6 class="a3q a2G a41 a1P aR dark:aR"> Weber State University, Ogden, UT </h6>
+                  <article>
+                    <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="30">
+                      <p class="a3q a1F a1R a2f aQ dark:aS"> “I met Rushabh in the spring of 2016 while he was a master's student in computer science at UIS. At the time, two colleagues and I were looking for a research assistant to work with us on a university-funded research project. Rushabh applied for the position. None of us knew him because he came from another department but we were impressed not only with his technical knowledge and skills, which surpassed the other applicants', but also with his communication abilities, pleasant personality and self-confidence. He got the job. My 3-month collaboration with Rushabh during the summer of 2016 confirmed my initial impressions. Rushabh worked with us on data collection and coding for a meta-analytic study of supply chain integration. He parsed through hundreds of papers, identified the relevant papers and collected from them the effect sizes to include in our dataset. As a computer science major, Rushabh did not initially know much about supply chain management. But he learned very quickly. It was a pleasure to work with him. He understood what needed to be done, worked very hard, and completed his part of the project in the limited time that we had. It is an honor to recommend him. ” </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 13-->
+              <!--TESTIMONIAL 14 -->
+              <div class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40" data-wow-delay="0s">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+                </div>
+                <div class="shadow-effect">
+                  <div class="aq a19 a8 a2I[-1]">
+                    <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                  </div>
+                  <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                    <a href="https://www.linkedin.com/in/elham-sahebkar-68b886114/)" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                      <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C5103AQHR9IzytLwh9Q/profile-displayphoto-shrink_400_400/0/1517378632566?e=1678320000&v=beta&t=rbaSJ0xi0ko4Xqzc92oa8NGpU-G1zsoHkIR8x-7XcXU);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                    </a>
+                  </div>
+                  <h6 class="a3q a2G a2B a1P a1k dark:aT"> Elham Sahebkar </h6>
+                  <h6 class="a3q a2G a1O a1P a1k dark:aT"> Associate Professor </h6>
+                  <h6 class="a3q a2G a41 a1P aR dark:aR"> UIS, Springfield, IL </h6>
+                  <article>
+                    <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;" data-rm-words="30">
+                      <p class="a3q a1F a1R a2f aQ dark:aS"> “I had Rushabh in my CSC570 Big Data Analytics class in FALL 2016 and he was, without doubt, at the top 1% of class. Rushabh is very professional, smart, reliable, dedicated, and a creative thinker. The solutions he submitted for many of the class projects exceeded my expectations and demonstrated his ability to learn and think critically. He even did all the optional and challenge projects in the course. As final project for Big Data Analytics class, Rushabh built an analyzed the ACM citation graph with Spark and Hadoop. I was very impressed with Rushabh’s performance in class and I am currently collaborating with him on a research project I am conducting with SIU School of Medicine on analyzing pediatric big data to discover pediatric population that are more at risk for certain diseases in Southern Illinois Region. Rushabh will also assisted me on a workshop on Twitter Graph Analysis we presented in March 2017 at Cyber Defense and Disaster Recovery Conference at UIS. Rushabh is also modest about his abilities and is a very pleasant person to work and interact with. Rushabh is very reliable and persistent. I have no doubt that Rushabh will be a great addition to any company who is willing to give him a chance as an international student.” </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 14-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Testimonial Section -->
+    <!-- ===== Contact Section start ===== -->
+    <section id="contact" class="a3p aw[120px] dark:a2" style="margin-top: -7rem;">
+      <div class="ae">
+        <div style="width:100%; height:100%">
+          <img style="margin-left: auto;
+          margin-right: auto; margin-bottom: 3rem;
+          display: block;" src="images/contact/contact-hero.png" alt="logo" class="floating" width="45%" />
+        </div>
+        <div class="wow fadeInUp a3t a3C aH[590px] a2G md:a30" data-wow-delay="0s">
+          <span class="a3q a2d a2B a1P aR sm:a1O"> Contact me </span>
+          <h2 class="a3q a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]"> Get in touch with me </h2>
+        </div>
+        <!-- <div class="ag aa a1L ac"> -->
+        <!-- <div class="ab ak lg:a44/12"><div
+              class="wow fadeInUp a2s aH[620px] "
+              data-wow-delay="0s"
+            ><img
+            src="images/contact/contact.svg"
+            alt="logo"
+            
+            /></div></div> -->
+        <div class="ab ak lg:a1U/12 ac" style="margin: auto">
+          <div class=" a1H dark:a3F a3E a3D sm:a45 wow fadeInUp a1X a1 a46 a1E dark:a3" data-wow-delay="0s">
+            <img src="images/logo/avatar.png" alt="logo" class="ac" />
+            
+            <div class="a3u a1W aa a1L ac a1t sm:a3v">
+              <div class="aZ af a3w a3x sm:a3y">
+                <a href="https://twitter.com/rushabhpatel5" name="social icon" aria-label="social icon">
+                  <img src="images/social/twitter.svg">
+                </a>
+              </div>
+              <div class="aZ af a3w a3x sm:a3y">
+                <a href="https://www.linkedin.com/in/rushabhpatel5/" name="social icon" aria-label="social icon">
+                  <img src="images/social/linkedin.svg">
+                </a>
+              </div>
+              <div class="aZ af a3w a3x sm:a3y">
+                <a href="https://www.github.com/rushabh31/" name="social icon" aria-label="social icon">
+                  <img src="images/social/github.svg">
+                </a>
+              </div>
+              <div class="aZ af a3w a3x sm:a3y">
+                <a href="mailto:rushabh.patel5@gmail.com" name="social icon" aria-label="social icon">
+                  <img src="images/social/gmail.svg">
+                </a>
+              </div>
+              <div class="aZ af a3w a3x sm:a3y">
+                <a href="tel:+15159818460" name="social icon" aria-label="social icon">
+                  <img src="images/social/phone.svg">
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- ===== Contact Section end ===== -->
+    <div class="wow fadeInUp a37 a2G a3p dark:a2" data-wow-delay="0s">
+    <div class="ao dark:an"><p style="text-align: center;
+          color: #E4F995;
+          font-family: 'BeautyDemo';
+          font-size: 30px;" class="a1F a1R a47 aQ dark:aS"> Developed by Rushabh Patel </p></div>
+    
+   <div> <p style="text-align: center;
+    color: #F56297;
+    font-family: 'BeautyDemo';
+    font-size: 30px;" class="dark:ao a1F a1R a47 aQ dark:aS"> Developed by Rushabh Patel </p></div>
+  </div>
+    </div>
+    <div class="aq a8 a1a a2Z">
+      <img src="images/shapes/footer-shape-2.svg" alt="shape" />
+    </div>
+    <div class="aq a2J a19 a2Z">
+      <img src="images/shapes/footer-shape-1.svg" alt="shape" />
+    </div>
+    </footer>
+    <!-- ===== Footer end ===== -->
+    <!-- ====== Back To Top Start -->
+    <a x-show="scrolledFromTop" href="javascript:void(0)" name="scrollToTop" aria-label="scrollToTop" class="hover:a38 back-to-top ad a39 a3a a3b a2I[999] aa a32 a33 ac a1t au a1A aT a3c a3d">
+      <span class="a10[6px] a3e a3f az a36 a3g a1I"></span>
+    </a>
+    <!-- ====== Back To Top End -->
+    <!-- ===== JS Files ====== -->
+    <script src="js/apexcharts.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      // ==== for menu scroll
+      const pageLink = document.querySelectorAll(".scroll-menu");
+      pageLink.forEach((elem) => {
+        elem.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.querySelector(elem.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+            offsetTop: 1 - 60,
+          });
+        });
+      });
+      // section menu active
+      function onScroll(event) {
+        const sections = document.querySelectorAll(".scroll-menu");
+        const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        for (let i = 0; i < sections.length; i++) {
+          const currLink = sections[i];
+          const val = currLink.getAttribute("href");
+          const refElement = document.querySelector(val);
+          const scrollTopMinus = scrollPos + 73;
+          if (refElement.offsetTop <= scrollTopMinus && refElement.offsetTop + refElement.offsetHeight > scrollTopMinus) {
+            document.querySelector(".scroll-menu").classList.remove("dark:aT", "aR");
+            currLink.classList.add("dark:aT", "aR");
+          } else {
+            currLink.classList.remove("dark:aT", "aR");
+          }
+        }
+      }
+      window.document.addEventListener("scroll", onScroll);
+      // ====
+      var options = {
+        series: [73, 55, 38, 20],
+        chart: {
+          type: "donut",
+          width: 400,
+        },
+        colors: ["#2347B9", "#3363FF", "#8BA6FF", "#8696CA"],
+        legend: {
+          show: false,
+        },
+        stroke: {
+          show: false,
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+            legend: {
+              position: "bottom",
+            },
+          },
+        }, ],
+      };
+      var chart = new ApexCharts(document.querySelector("#chart"), options);
+      chart.render();
+    </script>
+    <script>
+      /**
+       *  Read More JS
+       *  truncates text via specfied character length with more/less actions.
+       *  Maintains original format of pre truncated text.
+       *  @author stephen scaff
+       *  @todo   Add destroy method for ajaxed content support.
+       *
+       */
+      const ReadMore = (() => {
+        let s;
+        return {
+          settings() {
+            return {
+              content: document.querySelectorAll('.js-read-more'),
+              originalContentArr: [],
+              truncatedContentArr: [],
+              moreLink: "Read Description",
+              lessLink: "Collapse",
+            }
+          },
+          init() {
+            s = this.settings();
+            this.bindEvents();
+          },
+          bindEvents() {
+            ReadMore.truncateText();
+          },
+          /**
+           * Count Words
+           * Helper to handle word count.
+           * @param {string} str - Target content string.
+           */
+          countWords(str) {
+            return str.split(/\s+/).length;
+          },
+          /**
+           * Ellpise Content
+           * @param {string} str - content string.
+           * @param {number} wordsNum - Number of words to show before truncation.
+           */
+          ellipseContent(str, wordsNum) {
+            return str.split(/\s+/).slice(0, wordsNum).join(' ') + '...';
+          },
+          /**
+           * Truncate Text
+           * Truncate and ellipses contented content
+           * based on specified word count.
+           * Calls createLink() and handleClick() methods.
+           */
+          truncateText() {
+            for (let i = 0; i < s.content.length; i++) {
+              //console.log(s.content)
+              const originalContent = s.content[i].innerHTML;
+              const numberOfWords = s.content[i].dataset.rmWords;
+              const truncateContent = ReadMore.ellipseContent(originalContent, numberOfWords);
+              const originalContentWords = ReadMore.countWords(originalContent);
+              s.originalContentArr.push(originalContent);
+              s.truncatedContentArr.push(truncateContent);
+              if (numberOfWords < originalContentWords) {
+                s.content[i].innerHTML = s.truncatedContentArr[i];
+                let self = i;
+                ReadMore.createLink(self)
+              }
+            }
+            ReadMore.handleClick(s.content);
+          },
+          /**
+           * Create Link
+           * Creates and Inserts Read More Link
+           * @param {number} index - index reference of looped item
+           */
+          createLink(index) {
+            const linkWrap = document.createElement('span');
+            linkWrap.className = 'read-more__link-wrap';
+            linkWrap.innerHTML = `
+																																																				<div style="width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;">
+																																																					<a id="read-more_${index}"
+                                class="a3q read-more__link a1u a2 a22 a1E a1F aT hover:a2X dark:a1A  dark:hover:bg-opacity-90"
+                                style="margin-top:2rem;
+                                display: inline-block;
+                                font-size: 16px;cursor:pointer;">
+                                ${s.moreLink}
+                            </a>
+																																																				</div>`;
+            // Inset created link
+            s.content[index].parentNode.insertBefore(linkWrap, s.content[index].nextSibling);
+          },
+          /**
+           * Handle Click
+           * Toggle Click eve
+           */
+          handleClick(el) {
+            const readMoreLink = document.querySelectorAll('.read-more__link');
+            for (let j = 0, l = readMoreLink.length; j < l; j++) {
+              readMoreLink[j].addEventListener('click', function() {
+                const moreLinkID = this.getAttribute('id');
+                let index = moreLinkID.split('_')[1];
+                el[index].classList.toggle('is-expanded');
+                if (this.dataset.clicked !== 'true') {
+                  el[index].innerHTML = s.originalContentArr[index];
+                  this.innerHTML = s.lessLink;
+                  this.dataset.clicked = true;
+                } else {
+                  el[index].innerHTML = s.truncatedContentArr[index];
+                  this.innerHTML = s.moreLink;
+                  this.dataset.clicked = false;
+                }
+              });
+            }
+          },
+          /**
+           * Open All
+           * Method to expand all instances on the page.
+           * Will probably be useful with a destroy method.
+           */
+          openAll() {
+            const instances = document.querySelectorAll('.read-more__link');
+            for (let i = 0; i < instances.length; i++) {
+              content[i].innerHTML = s.truncatedContentArr[i];
+              instances[i].innerHTML = s.moreLink;
+            }
+          }
+        }
+      })();
+      //export default ReadMore;
+      ReadMore.init();
+    </script>
+    <script>
+      $(document).ready(function($) {
+        "use strict";
+        //  TESTIMONIALS CAROUSEL HOOK
+        $('#customers-testimonials').owlCarousel({
+          loop: true,
+          center: true,
+          items: 3,
+          margin: 0,
+          autoplay: true,
+          dots: true,
+          autoplayTimeout: 8500,
+          smartSpeed: 450,
+          responsive: {
+            0: {
+              items: 1
+            },
+            768: {
+              items: 2
+            },
+            1170: {
+              items: 3
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
